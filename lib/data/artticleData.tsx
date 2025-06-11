@@ -29,7 +29,8 @@ export const articlesData: ArticleI[] = [
       "ELSS (Equity Linked Savings Scheme)",
       "Index Funds",
       "Dividend Stocks"
-    ]
+    ],
+    content: "<p>This is a placeholder for the article content about investing for beginners.</p>"
   },
   {
     id: 2,
@@ -56,7 +57,8 @@ export const articlesData: ArticleI[] = [
       "Online Tutoring",
       "Graphic Design",
       "Content Writing"
-    ]
+    ],
+    content: "<p>This is a placeholder for the article content about side hustles.</p>"
   },
   {
     id: 3,
@@ -83,7 +85,8 @@ export const articlesData: ArticleI[] = [
       "Auto-Save Features",
       "Round-up Savings",
       "Goal-based Savings"
-    ]
+    ],
+    content: "<p>This is a placeholder for the article content about emergency funds.</p>"
   },
   {
     id: 4,
@@ -110,7 +113,8 @@ export const articlesData: ArticleI[] = [
       "Emergency Fund Building",
       "Investment Allocation",
       "Financial Goal Setting"
-    ]
+    ],
+    content: "<p>This is a placeholder for the article content about budgeting.</p>"
   },
   {
     id: 5,
@@ -137,7 +141,8 @@ export const articlesData: ArticleI[] = [
       "Refinancing Options",
       "Extra Payment Strategy",
       "Financial Therapy"
-    ]
+    ],
+    content: "<p>This is a placeholder for the article content about paying off credit card debt.</p>"
   },
   {
     id: 6,
@@ -164,7 +169,8 @@ export const articlesData: ArticleI[] = [
       "Price Comparison Apps",
       "Subscription Management",
       "Financial Planning Tools"
-    ]
+    ],
+    content: "<p>This is a placeholder for the article content about personal finance apps.</p>"
   }
 ];
 
@@ -321,7 +327,7 @@ export const investingMethods: Record<string, MethodDetail2> = {
         "Stay invested for long-term (5+ years) to ride out market volatility",
         "Don't chase last year's best performing funds - focus on consistent performers",
         "Consider tax-saving ELSS funds for Section 80C benefits (₹1.5 lakh limit)",
-        "Use direct plans instead of regular plans to save on distributor commissions",
+        "Use direct plans instead of regular plans due to lack of awareness",
         "Monitor fund manager changes and investment style consistency",
         "Set clear financial goals and choose funds accordingly"
       ],

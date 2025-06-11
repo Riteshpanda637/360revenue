@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button'
 import { useRouter, usePathname } from 'next/navigation'
 import Link from 'next/link'
 import { Menu } from 'lucide-react'
+import Image from 'next/image'
 
 interface HeaderProps {
   onHomeClick?: () => void
@@ -21,23 +22,22 @@ export const Header: React.FC<HeaderProps> = ({ onHomeClick }) => {
   ]
 
   return (
-    <header className="bg-white shadow-sm">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <header className="bg-white shadow-sm py-1">
+      <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <div className="flex items-center  w-full">
-            <div className="w-8 h-8 bg-blue-500 rounded-sm flex items-center justify-center mr-2">
-              <div className="w-4 h-4 bg-white rounded-sm transform rotate-45"></div>
-            </div>
-            <Link href="/">
-              <span className="text-xl font-bold text-gray-900 cursor-pointer">
-                360revenue
-              </span>
-            </Link>
-          </div>
+          <Link href="/">
+            <Image
+              src="/rr.png"
+              alt="NewsTale Logo"
+              width={200}
+              height={200}
+              className="mr-4" // Optional: add margin if necessary
+            />
+          </Link>
 
           {/* Desktop Nav */}
-          <nav className="hidden md:flex space-x-14  justify-end w-full">
+          <nav className="hidden md:flex space-x-14 justify-end w-full">
             {navItems.map(({ label, path }) => {
               const isActive = pathname === path
               return (

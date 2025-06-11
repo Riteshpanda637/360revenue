@@ -1,4 +1,5 @@
 // app/articles/details/[slug]/page.tsx
+import React from 'react'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { investingMethods } from '../../../../lib/data/artticleData'
@@ -31,22 +32,21 @@ import BackButton from '@/components/home/Readmore/backbutton'
 import { Footer } from '@/components/layout/Footer'
 import { Header } from '@/components/layout/Header'
 import { articlesData } from '@/lib/data/artticleData'
-import ScrollToTopButton from '../../../components/ui/ScrollToTopButton'
 
-type Props = { params: { slug: string } }
+type Props = { params: Promise<{ slug: string }> }
 
-export const generateMetadata = ({ params }: { params: { slug: string } }) => {
-  const slug = params?.slug || '';
+export const generateMetadata = async ({ params }: { params: Promise<{ slug: string }> }) => {
+  const { slug } = await params;
   return {
-    title: `How to Earn Money Online: ${slug.replace(/-/g, ' ')} | 360revenue Method, Passive Income, Side Hustles, Investing, Financial Freedom`,
-    description: `Unlock the secrets to earning money online with this in-depth guide on ${slug.replace(/-/g, ' ')}. Discover expert strategies, actionable tips, and proven methods for building passive income, side hustles, investing, and achieving financial independence. 360revenue provides trusted resources for wealth building and online income success.`,
-    keywords: `earn money online, ${slug.replace(/-/g, ' ')}, make money, side hustles, investing, 360revenue, passive income, remote work, digital marketing, affiliate marketing, online business, financial independence, entrepreneurship, work from home, online jobs, side hustle, make money from home, internet income, gig economy, online side hustle, extra income, financial freedom, online earning tips, wealth building, financial literacy, 360revenue article, 360revenue guide, 360revenue tips, 360revenue strategies, 360revenue resources, 360revenue blog, 360revenue insights, 360revenue analysis, 360revenue research, 360revenue trends, 360revenue best practices, 360revenue case studies, 360revenue examples, 360revenue frameworks, 360revenue models, 360revenue systems, 360revenue processes, 360revenue methods, 360revenue techniques, 360revenue plans, 360revenue workshops, 360revenue webinars, 360revenue events, 360revenue community, 360revenue forums, 360revenue groups, 360revenue clubs, 360revenue networking, 360revenue meetups, 360revenue coaching, 360revenue consulting, 360revenue support, 360revenue help, 360revenue contact, 360revenue about, 360revenue team, 360revenue partners, 360revenue affiliates, 360revenue sponsors, 360revenue press, 360revenue media, 360revenue awards, 360revenue recognition, 360revenue achievements, 360revenue milestones, 360revenue mission, 360revenue vision, 360revenue values, 360revenue goals, 360revenue roadmap, 360revenue updates, 360revenue news, 360revenue announcements, financial education blog, financial literacy resources, personal finance coaching, wealth building tips, online income journey, financial independence story, financial freedom inspiration, 360revenue founder story, 360revenue leadership, 360revenue expertise, 360revenue experience, 360revenue background, 360revenue credentials, 360revenue trust, 360revenue credibility, 360revenue transparency, 360revenue commitment, 360revenue dedication, 360revenue innovation, 360revenue solutions, 360revenue strategies, 360revenue resources, 360revenue guides, 360revenue articles, 360revenue blog, 360revenue tips, 360revenue insights, 360revenue analysis, 360revenue research, 360revenue trends, 360revenue best practices, 360revenue case studies, 360revenue examples, 360revenue frameworks, 360revenue models, 360revenue systems, 360revenue processes, 360revenue methods, 360revenue techniques, 360revenue plans, 360revenue workshops, 360revenue webinars, 360revenue events, 360revenue community, 360revenue forums, 360revenue groups, 360revenue clubs, 360revenue networking, 360revenue meetups, 360revenue coaching, 360revenue consulting, 360revenue support, 360revenue help, 360revenue contact, 360revenue about, 360revenue team, 360revenue partners, 360revenue affiliates, 360revenue sponsors, 360revenue press, 360revenue media, 360revenue awards, 360revenue recognition, 360revenue achievements, 360revenue milestones, 360revenue mission, 360revenue vision, 360revenue values, 360revenue goals, 360revenue roadmap, 360revenue updates, 360revenue news, 360revenue announcements`
+    title: `How to Earn Money Online: ${slug.replace(/-/g, ' ')} | MoneyWise Method, Passive Income, Side Hustles, Investing, Financial Freedom`,
+    description: `Unlock the secrets to earning money online with this in-depth guide on ${slug.replace(/-/g, ' ')}. Discover expert strategies, actionable tips, and proven methods for building passive income, side hustles, investing, and achieving financial independence. MoneyWise provides trusted resources for wealth building and online income success.`,
+    keywords: `earn money online, ${slug.replace(/-/g, ' ')}, make money, side hustles, investing, MoneyWise, passive income, remote work, digital marketing, affiliate marketing, online business, financial independence, entrepreneurship, work from home, online jobs, side hustle, make money from home, internet income, gig economy, online side hustle, extra income, financial freedom, online earning tips, wealth building, financial literacy, moneywise article, moneywise guide, moneywise tips, moneywise strategies, moneywise resources, moneywise blog, moneywise insights, moneywise analysis, moneywise research, moneywise trends, moneywise best practices, moneywise case studies, moneywise examples, moneywise frameworks, moneywise models, moneywise systems, moneywise processes, moneywise methods, moneywise techniques, moneywise plans, moneywise workshops, moneywise webinars, moneywise events, moneywise community, moneywise forums, moneywise groups, moneywise clubs, moneywise networking, moneywise meetups, moneywise coaching, moneywise consulting, moneywise support, moneywise help, moneywise contact, moneywise about, moneywise team, moneywise partners, moneywise affiliates, moneywise sponsors, moneywise press, moneywise media, moneywise awards, moneywise recognition, moneywise achievements, moneywise milestones, moneywise mission, moneywise vision, moneywise values, moneywise goals, moneywise roadmap, moneywise updates, moneywise news, moneywise announcements`
   };
 };
 
-export default function MethodPage({ params }: Props) {
-  // 1) Decode the URL‐encoded slug
-  const key = decodeURIComponent(params.slug)
+export default async function MethodPage({ params }: Props) {
+  const { slug } = await params;
+  const key = decodeURIComponent(slug);
   const method = investingMethods[key]
   if (!method) notFound()
 
@@ -97,18 +97,21 @@ export default function MethodPage({ params }: Props) {
             '@type': 'Article',
             'headline': title,
             'description': description,
-            'author': '360revenue',
+            'author': 'MoneyWise',
             'datePublished': '2024-01-01',
-            'image': '/360revenue-og-image.png',
-            'mainEntityOfPage': `https://www.360revenue.com/articles/details/${params.slug}`
+            'image': '/moneywise-og-image.png',
+            'mainEntityOfPage': `https://www.moneywise.com/articles/details/${slug}`
           })
         }}
       />
       {/* Hero */}
       <div className="container mx-auto px-2 sm:px-4 py-16">
+        {/* <Link href="/articles">
+           <BackButton/>
+          </Link> */}
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-5xl font-bold mb-6"> {title}</h1>
-          <p className="text-xl mb-8 text-purple-100">{description} Discover proven strategies, expert tips, and actionable methods for earning money online, building passive income, and achieving financial freedom. Explore 360revenue's comprehensive guides and join our community of wealth builders and online entrepreneurs.</p>
+          <h1 className="text-5xl font-bold mb-6">How to Earn Money Online: {title}</h1>
+          <p className="text-xl mb-8 text-purple-100">{description} Discover proven strategies, expert tips, and actionable methods for earning money online, building passive income, and achieving financial freedom. Explore MoneyWise's comprehensive guides and join our community of wealth builders and online entrepreneurs.</p>
           <div className="flex flex-wrap justify-center gap-4 mb-8">
             <Badge className="bg-purple-700 text-white px-4 py-2">
               <DollarSign className="w-4 h-4 mr-1" />
@@ -125,6 +128,7 @@ export default function MethodPage({ params }: Props) {
           </div>
         </div>
       </div>
+
       {/* Key Requirements */}
       <div className="bg-white text-gray-900 py-16">
         <div className="container mx-auto px-2 sm:px-4">
@@ -152,6 +156,7 @@ export default function MethodPage({ params }: Props) {
           </div>
         </div>
       </div>
+
       {/* Introduction */}
       <div className="bg-gray-50 text-gray-900 py-16">
         <div className="container mx-auto px-2 sm:px-4 max-w-4xl">
@@ -294,13 +299,13 @@ export default function MethodPage({ params }: Props) {
         </div>
       </div>
 
-      {/* Related Earning Methods Grid (at the bottom) */}
+      {/* Related Earning Methods Grid */}
       <div className="bg-white text-gray-900 py-16">
         <div className="container mx-auto px-2 sm:px-4 max-w-6xl">
-          <h2 className="text-3xl font-bold mb-8 text-center">Earning more</h2>
+          <h2 className="text-3xl font-bold mb-8 text-center">Related Earning Methods</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
             {articlesData
-              .filter(a => a.slug !== params.slug)
+              .filter(a => a.slug !== slug)
               .slice(0, 4)
               .map((related, idx) => (
                 <Card
@@ -331,6 +336,7 @@ export default function MethodPage({ params }: Props) {
         <div className="container mx-auto px-2 sm:px-4 max-w-4xl">
           <h2 className="text-3xl font-bold mb-8">Conclusion</h2>
           <p className="text-lg leading-relaxed mb-6">{conclusion}</p>
+
         </div>
       </div>
 
@@ -341,7 +347,6 @@ export default function MethodPage({ params }: Props) {
         </div>
       </div>
       <Footer/>
-      <ScrollToTopButton />
     </div>
   )
 }

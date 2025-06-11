@@ -13,7 +13,7 @@ import { Footer } from '@/components/layout/Footer';
 import { Header } from '@/components/layout/Header';
 
 type Props = {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 };
 
 
@@ -36,17 +36,17 @@ const colorClasses = [
 // Simulated DB (you'll replace this with real DB/API call)
 
 
-export const generateMetadata = ({ params }: { params: { slug: string } }) => {
-  const slug = params?.slug || '';
+export const generateMetadata = async ({ params }: { params: Promise<{ slug: string }> }) => {
+  const { slug } = await params;
   return {
     title: `How to Earn Money Online: ${slug.replace(/-/g, ' ')} | 360revenue Article, Passive Income, Side Hustles, Investing, Financial Freedom`,
     description: `Explore in-depth strategies, actionable tips, and expert insights on how to earn money online with this comprehensive guide on ${slug.replace(/-/g, ' ')}. Learn about passive income, side hustles, investing, financial independence, and more from 360revenue, your trusted source for wealth building and online income methods.`,
-    keywords: `earn money online, ${slug.replace(/-/g, ' ')}, make money, side hustles, investing, 360revenue, passive income, remote work, digital marketing, affiliate marketing, online business, financial independence, entrepreneurship, work from home, online jobs, side hustle, make money from home, internet income, gig economy, online side hustle, extra income, financial freedom, online earning tips, wealth building, financial literacy, 360revenue article, 360revenue guide, 360revenue tips, 360revenue strategies, 360revenue resources, 360revenue blog, 360revenue insights, 360revenue analysis, 360revenue research, 360revenue trends, 360revenue best practices, 360revenue case studies, 360revenue examples, 360revenue frameworks, 360revenue models, 360revenue systems, 360revenue processes, 360revenue methods, 360revenue techniques, 360revenue plans, 360revenue workshops, 360revenue webinars, 360revenue events, 360revenue community, 360revenue forums, 360revenue groups, 360revenue clubs, 360revenue networking, 360revenue meetups, 360revenue coaching, 360revenue consulting, 360revenue support, 360revenue help, 360revenue contact, 360revenue about, 360revenue team, 360revenue partners, 360revenue affiliates, 360revenue sponsors, 360revenue press, 360revenue media, 360revenue awards, 360revenue recognition, 360revenue achievements, 360revenue milestones, 360revenue mission, 360revenue vision, 360revenue values, 360revenue goals, 360revenue roadmap, 360revenue updates, 360revenue news, 360revenue announcements, financial education blog, financial literacy resources, personal finance coaching, wealth building tips, online income journey, financial independence story, financial freedom inspiration, 360revenue founder story, 360revenue leadership, 360revenue expertise, 360revenue experience, 360revenue background, 360revenue credentials, 360revenue trust, 360revenue credibility, 360revenue transparency, 360revenue commitment, 360revenue dedication, 360revenue innovation, 360revenue solutions, 360revenue strategies, 360revenue resources, 360revenue guides, 360revenue articles, 360revenue blog, 360revenue tips, 360revenue insights, 360revenue analysis, 360revenue research, 360revenue trends, 360revenue best practices, 360revenue case studies, 360revenue examples, 360revenue frameworks, 360revenue models, 360revenue systems, 360revenue processes, 360revenue methods, 360revenue techniques, 360revenue plans, 360revenue workshops, 360revenue webinars, 360revenue events, 360revenue community, 360revenue forums, 360revenue groups, 360revenue clubs, 360revenue networking, 360revenue meetups, 360revenue coaching, 360revenue consulting, 360revenue support, 360revenue help, 360revenue contact, 360revenue about, 360revenue team, 360revenue partners, 360revenue affiliates, 360revenue sponsors, 360revenue press, 360revenue media, 360revenue awards, 360revenue recognition, 360revenue achievements, 360revenue milestones, 360revenue mission, 360revenue vision, 360revenue values, 360revenue goals, 360revenue roadmap, 360revenue updates, 360revenue news, 360revenue announcements`
+    keywords: `earn money online, ${slug.replace(/-/g, ' ')}, make money, side hustles, investing, 360revenue, passive income, remote work, digital marketing, affiliate marketing, online business, financial independence, entrepreneurship, work from home, online jobs, side hustle, make money from home, internet income, gig economy, online side hustle, extra income, financial freedom, online earning tips, wealth building, financial literacy, 360revenue article, 360revenue guide, 360revenue tips, 360revenue strategies, 360revenue resources, 360revenue blog, 360revenue insights, 360revenue analysis, 360revenue research, 360revenue trends, 360revenue best practices, 360revenue case studies, 360revenue examples, 360revenue frameworks, 360revenue models, 360revenue systems, 360revenue processes, 360revenue methods, 360revenue techniques, 360revenue plans, 360revenue workshops, 360revenue webinars, 360revenue events, 360revenue community, 360revenue forums, 360revenue groups, 360revenue clubs, 360revenue networking, 360revenue meetups, 360revenue coaching, 360revenue consulting, 360revenue support, 360revenue help, 360revenue contact, 360revenue about, 360revenue team, 360revenue partners, 360revenue affiliates, 360revenue sponsors, 360revenue press, 360revenue media, 360revenue awards, 360revenue recognition, 360revenue achievements, 360revenue milestones, 360revenue mission, 360revenue vision, 360revenue values, 360revenue goals, 360revenue roadmap, 360revenue updates, 360revenue news, 360revenue announcements`
   };
 };
 
 export default async function ArticlePage({ params }: Props) {
-  const { slug } = params;
+  const { slug } = await params;
 
   // Fetch the article by slug
   const article = articlesData.find((a) => a.slug === slug);

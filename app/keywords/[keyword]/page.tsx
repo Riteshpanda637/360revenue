@@ -18,8 +18,9 @@ const keywordDescriptions: Record<string, string> = {
   'personal finance': 'Personal finance covers managing your money, including budgeting, saving, investing, and planning for retirement or major expenses.'
 };
 
-export async function generateMetadata({ params }: { params: { keyword: string } }) {
-  const keyword = decodeURIComponent(params.keyword);
+export async function generateMetadata({ params }: { params: Promise<{ keyword: string }> }) {
+  const { keyword: rawKeyword } = await params;
+  const keyword = decodeURIComponent(rawKeyword);
   return {
     title: `${keyword.charAt(0).toUpperCase() + keyword.slice(1)} | 360revenue Financial Glossary`,
     description: keywordDescriptions[keyword] || `Learn the meaning and importance of ${keyword} in personal finance, investing, and wealth building.`,
@@ -27,8 +28,9 @@ export async function generateMetadata({ params }: { params: { keyword: string }
   };
 }
 
-export default function KeywordPage({ params }: { params: { keyword: string } }) {
-  const keyword = decodeURIComponent(params.keyword);
+export default async function KeywordPage({ params }: { params: Promise<{ keyword: string }> }) {
+  const { keyword: rawKeyword } = await params;
+  const keyword = decodeURIComponent(rawKeyword);
   const description = keywordDescriptions[keyword];
   return <KeywordClient keyword={keyword} description={description} />;
-} 
+}

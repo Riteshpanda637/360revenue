@@ -13,6 +13,7 @@ export interface Article {
   authorBio: string;
   authorAvatar: string;
   slug: string; // For URL routing
+  content?: string; // Added for ArticlePage compatibility
 }
 
 // types/article.ts
@@ -29,6 +30,8 @@ export interface ArticleI {
   image: string;
   earningMethods: string[];
   slug: string; // For URL routing
+  content?: string; // Added for ArticlePage compatibility
+
 
 }
 
