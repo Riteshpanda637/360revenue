@@ -41,8 +41,12 @@ export default function RootLayout({
         <meta name="twitter:description" content="Discover the best ways to earn money online, manage your finances, and achieve financial freedom with 360revenue." />
         <meta name="twitter:image" content="/360revenue-og-image.png" />
          {/* Global AdSense script */}
-       <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7426456118888851"
-     crossOrigin="anonymous"></script>
+       <script
+  async
+  src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7426456118888851"
+  crossOrigin="anonymous"
+></script>
+
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}

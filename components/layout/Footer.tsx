@@ -25,7 +25,8 @@ export const Footer: React.FC = () => {
                 <li><a href="/categories" className="text-gray-400 hover:text-white text-sm">Categories</a></li>
                 <li><a href="/resources" className="text-gray-400 hover:text-white text-sm">Resources</a></li>
                 <li><a href="/about" className="text-gray-400 hover:text-white text-sm">About</a></li>
-                <li><a href="/contact" className="text-gray-400 hover:text-white text-sm">Contact</a></li>
+                <li><a href="/privacypolicy" className="text-gray-400 hover:text-white text-sm">privacy Policy</a></li>
+                <li><a href="/terms&condition" className="text-gray-400 hover:text-white text-sm">Terms & Condition</a></li>
               </ul>
             </div>
 
