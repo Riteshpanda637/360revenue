@@ -40,6 +40,7 @@ export default function RootLayout({
         <meta name="twitter:title" content="360revenue - Personal Finance & Earning Guides" />
         <meta name="twitter:description" content="Discover the best ways to earn money online, manage your finances, and achieve financial freedom with 360revenue." />
         <meta name="twitter:image" content="/360revenue-og-image.png" />
+        <meta name="google-site-verification" content="vfheNm_yHRTOvHCN8dojFDINR065LJD9OakAcdQQLJs" />
          {/* Global AdSense script */}
        <script
   async
