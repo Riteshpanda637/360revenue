@@ -54,77 +54,84 @@ export default async function ArticlePage({ params }: Props) {
   if (!article) notFound();
 
   return (
-    <div className="min-h-screen bg-gray-50 px-2 sm:px-0">
-      <Header/>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'Article',
-            'headline': article.title,
-            'description': article.summary,
-            'author': article.author,
-            'datePublished': article.date,
-            'image': '/360revenue-og-image.png',
-            'mainEntityOfPage': `https://www.360revenue.com/articles/${article.slug}`
-          })
-        }}
-      />
-      <div className="max-w-6xl mx-auto px-2 sm:px-4 py-8">
-        <div className="mb-8">
-          {/* <Link href="/">
-            <Button variant="ghost" className="mb-4 hover:bg-gray-200">
-              <ArrowLeft className="w-4 h-4 mr-2" />
-              Back to Articles
-            </Button>
-          </Link> */}
-          
-          <div className="mb-6">
-            <Badge variant="secondary" className="mb-2 bg-blue-100 text-blue-800">
-              {article.category}
-            </Badge>
-            <h1 className="text-3xl font-bold text-gray-900 mb-2">
-              How to Earn Money Online: <span className="text-blue-500">{article.title}</span>
-            </h1>
-            <p className="text-gray-600 mb-4">
-              {article.summary} Discover proven strategies, expert tips, and actionable methods for earning money online, building passive income, and achieving financial freedom. Explore 360revenue's comprehensive guides and join our community of wealth builders and online entrepreneurs.
-            </p>
-          </div>
-        </div>
-        
-        {/* <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-          {article.earningMethods.map((method, index) => (
-            <Link 
-              key={index} 
-              href={`/articles/${article.id}/methods/${encodeURIComponent(method)}`}
-            >
-              <Card className="hover:shadow-md transition-all duration-200 hover:scale-105 cursor-pointer group bg-white border border-gray-200">
-                <CardContent className="p-4">
-                  <div className="flex items-center justify-between">
-                    <span className="font-medium text-sm group-hover:text-blue-600 transition-colors text-gray-900">
-                      {method}
-                    </span>
-                    <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-blue-600 group-hover:translate-x-1 transition-all" />
-                  </div>
-                </CardContent>
-              </Card>
-            </Link>
-          ))}
-        </div> */}
-
-        {/* Remove the old earning methods grid using DynamicArticleCard */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {article?.earningMethods.map((e, index) => {
-                  const colorClass = colorClasses[index % colorClasses.length];
-                  return(
-      <DynamicArticleCard earningMethods={e} key={index} className={`rounded-lg p-4 font-medium shadow-sm ${colorClass}`}/>
-
-                  )
-})}
+    <>
+      {/* <Script
+        async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7426456118888851"
+        crossOrigin="anonymous"
+      /> */}
+      <div className="min-h-screen bg-gray-50 px-2 sm:px-0">
+        <Header/>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'Article',
+              'headline': article.title,
+              'description': article.summary,
+              'author': article.author,
+              'datePublished': article.date,
+              'image': '/360revenue-og-image.png',
+              'mainEntityOfPage': `https://www.360revenue.com/articles/${article.slug}`
+            })
+          }}
+        />
+        <div className="max-w-6xl mx-auto px-2 sm:px-4 py-8">
+          <div className="mb-8">
+            {/* <Link href="/">
+              <Button variant="ghost" className="mb-4 hover:bg-gray-200">
+                <ArrowLeft className="w-4 h-4 mr-2" />
+                Back to Articles
+              </Button>
+            </Link> */}
+            
+            <div className="mb-6">
+              <Badge variant="secondary" className="mb-2 bg-blue-100 text-blue-800">
+                {article.category}
+              </Badge>
+              <h1 className="text-3xl font-bold text-gray-900 mb-2">
+                How to Earn Money Online: <span className="text-blue-500">{article.title}</span>
+              </h1>
+              <p className="text-gray-600 mb-4">
+                {article.summary} Discover proven strategies, expert tips, and actionable methods for earning money online, building passive income, and achieving financial freedom. Explore 360revenue's comprehensive guides and join our community of wealth builders and online entrepreneurs.
+              </p>
             </div>
+          </div>
+          
+          {/* <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+            {article.earningMethods.map((method, index) => (
+              <Link 
+                key={index} 
+                href={`/articles/${article.id}/methods/${encodeURIComponent(method)}`}
+              >
+                <Card className="hover:shadow-md transition-all duration-200 hover:scale-105 cursor-pointer group bg-white border border-gray-200">
+                  <CardContent className="p-4">
+                    <div className="flex items-center justify-between">
+                      <span className="font-medium text-sm group-hover:text-blue-600 transition-colors text-gray-900">
+                        {method}
+                      </span>
+                      <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-blue-600 group-hover:translate-x-1 transition-all" />
+                    </div>
+                  </CardContent>
+                </Card>
+              </Link>
+            ))}
+          </div> */}
+
+          {/* Remove the old earning methods grid using DynamicArticleCard */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {article?.earningMethods.map((e, index) => {
+                    const colorClass = colorClasses[index % colorClasses.length];
+                    return(
+    <DynamicArticleCard earningMethods={e} key={index} className={`rounded-lg p-4 font-medium shadow-sm ${colorClass}`}/>
+
+                    )
+})}
+              </div>
+        </div>
+        <Footer />
       </div>
-      <Footer />
-    </div>
+    </>
   );
 }

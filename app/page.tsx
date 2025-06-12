@@ -1,6 +1,7 @@
 import { Header } from '../components/layout/Header';
 import { Footer } from '../components/layout/Footer';
 import HomePageClient from '../components/home/HomePageClient';
+import AdBanner from '@/components/Adbanner';
 
 export const generateMetadata = () => ({
   title: "How to Earn Money Online | 360revenue - Tips, Guides & Strategies",
@@ -13,6 +14,9 @@ export default function page() {
     <div className="min-h-screen bg-white px-2 sm:px-0">
       <Header />
       <HomePageClient />
+      <div className="my-8">
+        <AdBanner />
+      </div>
       <Footer />
     </div>
   );
