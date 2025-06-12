@@ -73,7 +73,7 @@ export default async function ArticlePage({ params }: Props) {
               'author': article.author,
               'datePublished': article.date,
               'image': '/360revenue-og-image.png',
-              'mainEntityOfPage': `https://www.360revenue.com/articles/${article.slug}`
+              'mainEntityOfPage': `https://www.360revenue.in/articles/${article.slug}`
             })
           }}
         />

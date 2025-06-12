@@ -36,7 +36,7 @@ export default function page() {
             '@context': 'https://schema.org',
             '@type': 'Organization',
             'name': '360revenue',
-            'url': 'https://www.360revenue.com/',
+            'url': 'https://www.360revenue.in/',
             'logo': '/360revenue-og-image.png',
             'description': '360revenue is your trusted guide for earning money online, building side hustles, investing, and achieving financial freedom.'
           })

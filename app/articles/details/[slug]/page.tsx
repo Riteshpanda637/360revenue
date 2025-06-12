@@ -100,7 +100,7 @@ export default async function MethodPage({ params }: Props) {
             'author': 'MoneyWise',
             'datePublished': '2024-01-01',
             'image': '/moneywise-og-image.png',
-            'mainEntityOfPage': `https://www.moneywise.com/articles/details/${slug}`
+            'mainEntityOfPage': `https://www.moneywise.in/articles/details/${slug}`
           })
         }}
       />
