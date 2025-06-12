@@ -38,9 +38,9 @@ type Props = { params: Promise<{ slug: string }> }
 export const generateMetadata = async ({ params }: { params: Promise<{ slug: string }> }) => {
   const { slug } = await params;
   return {
-    title: `How to Earn Money Online: ${slug.replace(/-/g, ' ')} | MoneyWise Method, Passive Income, Side Hustles, Investing, Financial Freedom`,
-    description: `Unlock the secrets to earning money online with this in-depth guide on ${slug.replace(/-/g, ' ')}. Discover expert strategies, actionable tips, and proven methods for building passive income, side hustles, investing, and achieving financial independence. MoneyWise provides trusted resources for wealth building and online income success.`,
-    keywords: `earn money online, ${slug.replace(/-/g, ' ')}, make money, side hustles, investing, MoneyWise, passive income, remote work, digital marketing, affiliate marketing, online business, financial independence, entrepreneurship, work from home, online jobs, side hustle, make money from home, internet income, gig economy, online side hustle, extra income, financial freedom, online earning tips, wealth building, financial literacy, moneywise article, moneywise guide, moneywise tips, moneywise strategies, moneywise resources, moneywise blog, moneywise insights, moneywise analysis, moneywise research, moneywise trends, moneywise best practices, moneywise case studies, moneywise examples, moneywise frameworks, moneywise models, moneywise systems, moneywise processes, moneywise methods, moneywise techniques, moneywise plans, moneywise workshops, moneywise webinars, moneywise events, moneywise community, moneywise forums, moneywise groups, moneywise clubs, moneywise networking, moneywise meetups, moneywise coaching, moneywise consulting, moneywise support, moneywise help, moneywise contact, moneywise about, moneywise team, moneywise partners, moneywise affiliates, moneywise sponsors, moneywise press, moneywise media, moneywise awards, moneywise recognition, moneywise achievements, moneywise milestones, moneywise mission, moneywise vision, moneywise values, moneywise goals, moneywise roadmap, moneywise updates, moneywise news, moneywise announcements`
+    title: `How to Earn Money Online: ${slug.replace(/-/g, ' ')} | 360revenue Method, Passive Income, Side Hustles, Investing, Financial Freedom`,
+    description: `Unlock the secrets to earning money online with this in-depth guide on ${slug.replace(/-/g, ' ')}. Discover expert strategies, actionable tips, and proven methods for building passive income, side hustles, investing, and achieving financial independence. 360revenue provides trusted resources for wealth building and online income success.`,
+    keywords: `earn money online, ${slug.replace(/-/g, ' ')}, make money, side hustles, investing, 360revenue, passive income, remote work, digital marketing, affiliate marketing, online business, financial independence, entrepreneurship, work from home, online jobs, side hustle, make money from home, internet income, gig economy, online side hustle, extra income, financial freedom, online earning tips, wealth building, financial literacy, 360revenue article, 360revenue guide, 360revenue tips, 360revenue strategies, 360revenue resources, 360revenue blog, 360revenue insights, 360revenue analysis, 360revenue research, 360revenue trends, 360revenue best practices, 360revenue case studies, 360revenue examples, 360revenue frameworks, 360revenue models, 360revenue systems, 360revenue processes, 360revenue methods, 360revenue techniques, 360revenue plans, 360revenue workshops, 360revenue webinars, 360revenue events, 360revenue community, 360revenue forums, 360revenue groups, 360revenue clubs, 360revenue networking, 360revenue meetups, 360revenue coaching, 360revenue consulting, 360revenue support, 360revenue help, 360revenue contact, 360revenue about, 360revenue team, 360revenue partners, 360revenue affiliates, 360revenue sponsors, 360revenue press, 360revenue media, 360revenue awards, 360revenue recognition, 360revenue achievements, 360revenue milestones, 360revenue mission, 360revenue vision, 360revenue values, 360revenue goals, 360revenue roadmap, 360revenue updates, 360revenue news, 360revenue announcements`
   };
 };
 
@@ -97,10 +97,10 @@ export default async function MethodPage({ params }: Props) {
             '@type': 'Article',
             'headline': title,
             'description': description,
-            'author': 'MoneyWise',
+            'author': '360revenue',
             'datePublished': '2024-01-01',
-            'image': '/moneywise-og-image.png',
-            'mainEntityOfPage': `https://www.moneywise.in/articles/details/${slug}`
+            'image': '/360revenue-og-image.png',
+            'mainEntityOfPage': `https://www.360revenue.in/articles/details/${slug}`
           })
         }}
       />
@@ -111,7 +111,7 @@ export default async function MethodPage({ params }: Props) {
           </Link> */}
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-5xl font-bold mb-6">How to Earn Money Online: {title}</h1>
-          <p className="text-xl mb-8 text-purple-100">{description} Discover proven strategies, expert tips, and actionable methods for earning money online, building passive income, and achieving financial freedom. Explore MoneyWise's comprehensive guides and join our community of wealth builders and online entrepreneurs.</p>
+          <p className="text-xl mb-8 text-purple-100">{description} Discover proven strategies, expert tips, and actionable methods for earning money online, building passive income, and achieving financial freedom. Explore 360revenue's comprehensive guides and join our community of wealth builders and online entrepreneurs.</p>
           <div className="flex flex-wrap justify-center gap-4 mb-8">
             <Badge className="bg-purple-700 text-white px-4 py-2">
               <DollarSign className="w-4 h-4 mr-1" />
