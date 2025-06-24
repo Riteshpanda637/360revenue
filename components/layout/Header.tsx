@@ -18,6 +18,7 @@ export const Header: React.FC<HeaderProps> = ({ onHomeClick }) => {
   const navItems = [
     { label: 'Home',       path: '/' },
     { label: 'Categories', path: '/categories' },
+    // { label: 'Blog',      path: '/blog' },
     { label: 'About',      path: '/about' },
   ]
 

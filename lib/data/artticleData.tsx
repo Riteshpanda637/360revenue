@@ -6976,3 +6976,293 @@ export const colorMapping = {
   "Income": "bg-teal-500", // Teal for Income
   "Insurance": "bg-purple-500", // Purple for Insurance
 };
+
+export const blogData = [
+  {
+    id: 1,
+    title: "Babysitting: Earn cash while playing with kids",
+    description: "Starting a baby-sitting business is a classic way for teenagers to earn money. It involves taking care of children while their parents are away. This is a great option because it allows you to work flexible hours and build valuable skills in responsibility and childcare. This also makes it a good way to make money as teenagers because teens can earn a consistent amount of money hours and Sundays - learn more about services.",
+    image: "/home.png",
+    hourlyRate: "$10 - $20 per hour",
+    monthlyIncome: "$400 - $800",
+    incomeDetails: [
+      "Hourly rate: $10 - $20 per hour",
+      "Monthly income (Assuming 20 Hours/Week): $400 - $800"
+    ],
+    category: "childcare",
+    difficulty: "easy",
+    requirements: ["Responsible attitude", "Basic childcare knowledge", "References"]
+  },
+  {
+    id: 2,
+    title: "Dog walking: Turn puppy love into pocket money",
+    description: "If you are a dog lover and need some extra money, dog walking might be for you. It involves taking dogs for walks and ensuring they get their daily exercise. This is an excellent choice because it allows you to spend time outdoors and interact with furry friends.",
+    image: "/home.png",
+    hourlyRate: "$10 - $20 per walk",
+    monthlyIncome: "$300 - $1200",
+    incomeDetails: [
+      "Rate per walk: $10 - $20 per walk (depending on factors above)",
+      "Monthly income (1 dog): $300 - $600",
+      "Monthly income (2 dogs): $600 - $1200"
+    ],
+    category: "pet care",
+    difficulty: "easy",
+    requirements: ["Love for animals", "Physical fitness", "Reliable schedule"],
+    additionalResources: "How to make a dog walking business plan"
+  },
+  {
+    id: 3,
+    title: "Lawn mowing: Make money one yard at a time",
+    description: "Many people are willing to pay for someone else to take care of their lawn. If you have access to a lawnmower and enjoy working outdoors, lawn mowing can be a lucrative business idea. Consider offering additional services like weed trimming or leaf blowing to maximize your earnings.",
+    image: "/home.png",
+    hourlyRate: "$15 - $25 per hour",
+    monthlyIncome: "$600 - $1500+",
+    incomeDetails: [
+      "Hourly rate: $15-$25 per hour (depending on skills and services)",
+      "Monthly income (Mowing only, 4 lawns/day, 2-hour jobs): $600-$1000",
+      "Monthly income with additional services (More complex work, longer jobs): $800-$1500+"
+    ],
+    category: "outdoor services",
+    difficulty: "medium",
+    requirements: ["Access to lawnmower", "Physical strength", "Basic equipment knowledge"]
+  },
+  {
+    id: 4,
+    title: "Tutoring: Share your knowledge for cash",
+    description: "If you excel in certain subjects, tutoring younger students can be a rewarding way to earn money. You can help elementary or middle school students with homework, test preparation, or understanding difficult concepts while reinforcing your own knowledge.",
+    image: "/home.png",
+    hourlyRate: "$12 - $25 per hour",
+    monthlyIncome: "$400 - $1000",
+    incomeDetails: [
+      "Hourly rate: $12-$25 per hour (depending on subject and grade level)",
+      "Monthly income (10 hours/week): $400-$1000"
+    ],
+    category: "education",
+    difficulty: "medium",
+    requirements: ["Strong academic performance", "Patience", "Communication skills"]
+  },
+  {
+    id: 5,
+    title: "Freelance writing: Turn words into wealth",
+    description: "If you have strong writing skills, freelance writing can be an excellent way to make money online. You can write blog posts, articles, social media content, or help with school projects for other students.",
+    image: "/home.png",
+    hourlyRate: "$10 - $30 per hour",
+    monthlyIncome: "$300 - $1200",
+    incomeDetails: [
+      "Per article: $5-$50 (depending on length and complexity)",
+      "Hourly rate: $10-$30 per hour",
+      "Monthly income (part-time): $300-$1200"
+    ],
+    category: "creative",
+    difficulty: "medium",
+    requirements: ["Excellent writing skills", "Computer access", "Time management"]
+  },
+  {
+    id: 6,
+    title: "Graphic design: Create visual magic for money",
+    description: "If you're creative and have design skills, graphic design can be a profitable venture. You can create logos, social media graphics, flyers, or help local businesses with their visual branding needs.",
+    image: "/home.png",
+    hourlyRate: "$15 - $40 per hour",
+    monthlyIncome: "$500 - $1600",
+    incomeDetails: [
+      "Per project: $25-$200 (depending on complexity)",
+      "Hourly rate: $15-$40 per hour",
+      "Monthly income: $500-$1600"
+    ],
+    category: "creative",
+    difficulty: "hard",
+    requirements: ["Design software knowledge", "Creative skills", "Portfolio"]
+  },
+  {
+    id: 7,
+    title: "Photography: Capture moments, capture cash",
+    description: "If you have a good eye for photography and access to a decent camera, you can offer photography services for events, portraits, or stock photography. This can include school events, family photos, or local business needs.",
+    image: "/home.png",
+    hourlyRate: "$20 - $50 per hour",
+    monthlyIncome: "$400 - $2000",
+    incomeDetails: [
+      "Per event: $100-$500",
+      "Hourly rate: $20-$50 per hour",
+      "Monthly income: $400-$2000"
+    ],
+    category: "creative",
+    difficulty: "medium",
+    requirements: ["Camera equipment", "Photography skills", "Editing software"]
+  },
+  {
+    id: 8,
+    title: "Social media management: Turn scrolling into salary",
+    description: "Many small businesses need help managing their social media presence. If you're social media savvy, you can offer services like content creation, posting schedules, and engagement management for local businesses.",
+    image: "/home.png",
+    hourlyRate: "$12 - $25 per hour",
+    monthlyIncome: "$400 - $1000",
+    incomeDetails: [
+      "Per client: $100-$500 per month",
+      "Hourly rate: $12-$25 per hour",
+      "Monthly income (2-3 clients): $400-$1000"
+    ],
+    category: "digital marketing",
+    difficulty: "medium",
+    requirements: ["Social media knowledge", "Content creation skills", "Reliability"]
+  },
+  {
+    id: 9,
+    title: "Pet sitting: Home away from home for pets",
+    description: "Pet sitting involves taking care of pets while their owners are away. This can include feeding, walking, playing, and providing companionship. It's perfect for animal lovers who want flexible work.",
+    image: "/home.png",
+    hourlyRate: "$15 - $30 per day",
+    monthlyIncome: "$300 - $900",
+    incomeDetails: [
+      "Per day: $15-$30",
+      "Per week: $100-$200",
+      "Monthly income: $300-$900"
+    ],
+    category: "pet care",
+    difficulty: "easy",
+    requirements: ["Love for animals", "Responsibility", "Flexible schedule"]
+  },
+  {
+    id: 10,
+    title: "House sitting: Get paid to keep homes safe",
+    description: "House sitting involves staying at someone's home while they're away to keep it secure and maintained. This can include collecting mail, watering plants, and basic maintenance tasks.",
+    image: "/home.png",
+    hourlyRate: "$20 - $50 per day",
+    monthlyIncome: "$400 - $1500",
+    incomeDetails: [
+      "Per day: $20-$50",
+      "Per week: $150-$350",
+      "Monthly income: $400-$1500"
+    ],
+    category: "services",
+    difficulty: "easy",
+    requirements: ["Trustworthiness", "Responsibility", "References"]
+  },
+  {
+    id: 11,
+    title: "Car washing: Make vehicles shine for profit",
+    description: "Car washing is a straightforward way to earn money. You can offer mobile car washing services in your neighborhood or set up at local events. It requires minimal startup costs and can be very profitable.",
+    image: "/home.png",
+    hourlyRate: "$15 - $25 per car",
+    monthlyIncome: "$400 - $1000",
+    incomeDetails: [
+      "Per car: $15-$25",
+      "Per day (4-6 cars): $60-$150",
+      "Monthly income: $400-$1000"
+    ],
+    category: "services",
+    difficulty: "easy",
+    requirements: ["Basic cleaning supplies", "Physical energy", "Transportation"]
+  },
+  {
+    id: 12,
+    title: "Virtual assistance: Digital help from anywhere",
+    description: "Virtual assistance involves helping businesses or entrepreneurs with administrative tasks remotely. This can include email management, scheduling, data entry, or customer service support.",
+    image: "/home.png",
+    hourlyRate: "$10 - $20 per hour",
+    monthlyIncome: "$400 - $800",
+    incomeDetails: [
+      "Hourly rate: $10-$20 per hour",
+      "Part-time (20 hours/week): $400-$800",
+      "Full-time potential: $800-$1600"
+    ],
+    category: "online services",
+    difficulty: "medium",
+    requirements: ["Computer skills", "Internet access", "Communication skills"]
+  },
+  {
+    id: 13,
+    title: "YouTube channel: Create content, create income",
+    description: "Starting a YouTube channel around your interests or expertise can generate income through ads, sponsorships, and merchandise. Success requires consistency, quality content, and patience to build an audience.",
+    image: "/home.png",
+    hourlyRate: "Variable",
+    monthlyIncome: "$0 - $5000+",
+    incomeDetails: [
+      "Ad revenue: $1-$5 per 1000 views",
+      "Sponsorships: $100-$1000+ per video",
+      "Monthly potential: $0-$5000+ (highly variable)"
+    ],
+    category: "content creation",
+    difficulty: "hard",
+    requirements: ["Video creation skills", "Consistency", "Unique content ideas"]
+  },
+  {
+    id: 14,
+    title: "Selling crafts online: Turn creativity into cash",
+    description: "If you're crafty, you can sell handmade items online through platforms like Etsy, Facebook Marketplace, or local craft fairs. This includes jewelry, art, decorations, or custom items.",
+    image: "/home.png",
+    hourlyRate: "Variable",
+    monthlyIncome: "$200 - $1500",
+    incomeDetails: [
+      "Per item: $5-$100+ (depending on complexity)",
+      "Time investment: 2-10 hours per item",
+      "Monthly income: $200-$1500"
+    ],
+    category: "creative",
+    difficulty: "medium",
+    requirements: ["Craft skills", "Materials budget", "Online selling knowledge"]
+  },
+  {
+    id: 15,
+    title: "Selling products online: Digital entrepreneur basics",
+    description: "You can sell various products online, from dropshipping to reselling items you find at thrift stores. This teaches valuable business skills and can be scaled over time.",
+    image: "/home.png",
+    hourlyRate: "Variable",
+    monthlyIncome: "$100 - $2000+",
+    incomeDetails: [
+      "Profit margin: 20-50% per item",
+      "Time investment: 10-30 hours per week",
+      "Monthly potential: $100-$2000+"
+    ],
+    category: "business",
+    difficulty: "hard",
+    requirements: ["Initial investment", "Market research skills", "Customer service"]
+  },
+  {
+    id: 16,
+    title: "Online surveys: Easy money in spare time",
+    description: "Taking online surveys is one of the easiest ways to make small amounts of money in your free time. While not highly profitable, it requires no special skills and can be done anywhere.",
+    image: "/home.png",
+    hourlyRate: "$3 - $8 per hour",
+    monthlyIncome: "$50 - $200",
+    incomeDetails: [
+      "Per survey: $0.50-$5",
+      "Hourly equivalent: $3-$8",
+      "Monthly income (casual): $50-$200"
+    ],
+    category: "online",
+    difficulty: "easy",
+    requirements: ["Internet access", "Patience", "Honest responses"]
+  },
+  {
+    id: 17,
+    title: "App testing: Get paid to find bugs",
+    description: "Companies pay testers to use their apps and websites to find bugs and provide feedback. This helps improve user experience while earning money for your time and attention to detail.",
+    image: "/home.png",
+    hourlyRate: "$10 - $25 per hour",
+    monthlyIncome: "$200 - $600",
+    incomeDetails: [
+      "Per test: $5-$50 (depending on complexity)",
+      "Hourly rate: $10-$25",
+      "Monthly income: $200-$600"
+    ],
+    category: "online",
+    difficulty: "easy",
+    requirements: ["Technology comfort", "Attention to detail", "Reliable internet"]
+  },
+  {
+    id: 18,
+    title: "Event organizing: Plan parties, earn profits",
+    description: "If you're organized and creative, event planning can be very profitable. Start with small events like birthday parties or school functions, then grow to larger events as you gain experience.",
+    image: "/home.png",
+    hourlyRate: "$15 - $40 per hour",
+    monthlyIncome: "$500 - $2000",
+    incomeDetails: [
+      "Per event: $100-$1000+",
+      "Hourly rate: $15-$40",
+      "Monthly income: $500-$2000"
+    ],
+    category: "services",
+    difficulty: "hard",
+    requirements: ["Organization skills", "Creativity", "Network of vendors"]
+  }
+];
