@@ -1,15 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- Static pages -->
   <url><loc>https://www.360revenue.in/</loc></url>
-  <url><loc>https://www.360revenue.in/about</loc></url>
-  <url><loc>https://www.360revenue.in/categories</loc></url>
-  <url><loc>https://www.360revenue.in/privacypolicy</loc></url>
-  <url><loc>https://www.360revenue.in/methods</loc></url>
-  <url><loc>https://www.360revenue.in/subcategories</loc></url>
-  <url><loc>https://www.360revenue.in/terms&condition</loc></url>
-
-  <!-- Articles -->
   <url><loc>https://www.360revenue.in/articles/ultimate-guide-investing-beginners</loc></url>
   <url><loc>https://www.360revenue.in/articles/top-10-side-hustles-boost-income</loc></url>
   <url><loc>https://www.360revenue.in/articles/emergency-fund-how-much-save</loc></url>
@@ -28,6 +19,10 @@
   <url><loc>https://www.360revenue.in/articles/elss-investment</loc></url>
   <url><loc>https://www.360revenue.in/articles/index-funds-investment</loc></url>
   <url><loc>https://www.360revenue.in/articles/dividend-stocks-investment</loc></url>
+  <url><loc>https://www.360revenue.in/articles/corporate-bonds-investment</loc></url>
+  <url><loc>https://www.360revenue.in/articles/elss-investment</loc></url>
+  <url><loc>https://www.360revenue.in/articles/index-funds-investment</loc></url>
+  <url><loc>https://www.360revenue.in/articles/dividend-stocks-investment</loc></url>
   <url><loc>https://www.360revenue.in/articles/freelancing-services</loc></url>
   <url><loc>https://www.360revenue.in/articles/online-business</loc></url>
   <url><loc>https://www.360revenue.in/articles/business-consulting</loc></url>
@@ -36,11 +31,8 @@
   <url><loc>https://www.360revenue.in/articles/youtube-monetization</loc></url>
   <url><loc>https://www.360revenue.in/articles/blog-monetization</loc></url>
   <url><loc>https://www.360revenue.in/articles/social-media-management</loc></url>
-  <url><loc>https://www.360revenue.in/articles/teen-social-media-management</loc></url>
   <url><loc>https://www.360revenue.in/articles/virtual-assistant-services</loc></url>
-  <url><loc>https://www.360revenue.in/articles/teen-virtual-assistant</loc></url>
   <url><loc>https://www.360revenue.in/articles/online-tutoring</loc></url>
-  <url><loc>https://www.360revenue.in/articles/teen-online-tutoring</loc></url>
   <url><loc>https://www.360revenue.in/articles/graphic-design-services</loc></url>
   <url><loc>https://www.360revenue.in/articles/content-writing</loc></url>
   <url><loc>https://www.360revenue.in/articles/high-yield-savings-account</loc></url>
@@ -78,6 +70,7 @@
   <url><loc>https://www.360revenue.in/articles/refinancing-options</loc></url>
   <url><loc>https://www.360revenue.in/articles/extra-payment-strategy</loc></url>
   <url><loc>https://www.360revenue.in/articles/financial-therapy</loc></url>
+  <url><loc>https://www.360revenue.in/articles/expense-tracking-apps</loc></url>
   <url><loc>https://www.360revenue.in/articles/investment-apps</loc></url>
   <url><loc>https://www.360revenue.in/articles/budgeting-tools</loc></url>
   <url><loc>https://www.360revenue.in/articles/cashback-apps</loc></url>
@@ -89,38 +82,106 @@
   <url><loc>https://www.360revenue.in/articles/price-comparison-apps</loc></url>
   <url><loc>https://www.360revenue.in/articles/subscription-management</loc></url>
   <url><loc>https://www.360revenue.in/articles/financial-planning-tools</loc></url>
+  <url><loc>https://www.360revenue.in/articles/babysitting</loc></url>
+  <url><loc>https://www.360revenue.in/articles/pet-sitting</loc></url>
+  <url><loc>https://www.360revenue.in/articles/tutoring</loc></url>
+  <url><loc>https://www.360revenue.in/articles/online-surveys</loc></url>
+  <url><loc>https://www.360revenue.in/articles/content-creation</loc></url>
+  <url><loc>https://www.360revenue.in/articles/lawn-care</loc></url>
+  <url><loc>https://www.360revenue.in/articles/house-cleaning</loc></url>
+  <url><loc>https://www.360revenue.in/articles/car-washing</loc></url>
+  <url><loc>https://www.360revenue.in/articles/teen-social-media-management</loc></url>
+  <url><loc>https://www.360revenue.in/articles/teen-virtual-assistant</loc></url>
+  <url><loc>https://www.360revenue.in/articles/teen-online-tutoring</loc></url>
+  <url><loc>https://www.360revenue.in/articles/event-planning</loc></url>
+  <url><loc>https://www.360revenue.in/articles/app-testing</loc></url>
 
-  <!-- Article details (repeat all method slugs as /articles/details/[slug]) -->
-  <url><loc>https://www.360revenue.in/articles/details/stock-market-investment</loc></url>
-  <url><loc>https://www.360revenue.in/articles/details/mutual-fund-investment</loc></url>
-  <url><loc>https://www.360revenue.in/articles/details/sip-investment</loc></url>
-  <url><loc>https://www.360revenue.in/articles/details/fixed-deposits-investment</loc></url>
-  <url><loc>https://www.360revenue.in/articles/details/government-bonds-investment</loc></url>
-  <url><loc>https://www.360revenue.in/articles/details/corporate-bonds-investment</loc></url>
-  <url><loc>https://www.360revenue.in/articles/details/gold-investment</loc></url>
-  <url><loc>https://www.360revenue.in/articles/details/real-estate-investment</loc></url>
-  <url><loc>https://www.360revenue.in/articles/details/ppf-investment</loc></url>
-  <url><loc>https://www.360revenue.in/articles/details/elss-investment</loc></url>
-  <url><loc>https://www.360revenue.in/articles/details/index-funds-investment</loc></url>
-  <url><loc>https://www.360revenue.in/articles/details/dividend-stocks-investment</loc></url>
-  <url><loc>https://www.360revenue.in/articles/details/teen-social-media-management</loc></url>
-  <url><loc>https://www.360revenue.in/articles/details/teen-virtual-assistant</loc></url>
-  <url><loc>https://www.360revenue.in/articles/details/teen-online-tutoring</loc></url>
-
-  <!-- Keywords -->
-  <url><loc>https://www.360revenue.in/keywords/passive%20income</loc></url>
-  <url><loc>https://www.360revenue.in/keywords/side%20hustles</loc></url>
-  <url><loc>https://www.360revenue.in/keywords/investing</loc></url>
-  <url><loc>https://www.360revenue.in/keywords/budgeting</loc></url>
-  <url><loc>https://www.360revenue.in/keywords/financial%20freedom</loc></url>
-  <url><loc>https://www.360revenue.in/keywords/wealth%20building</loc></url>
-  <url><loc>https://www.360revenue.in/keywords/online%20business</loc></url>
-  <url><loc>https://www.360revenue.in/keywords/financial%20literacy</loc></url>
-  <url><loc>https://www.360revenue.in/keywords/debt%20management</loc></url>
-  <url><loc>https://www.360revenue.in/keywords/saving%20strategies</loc></url>
-  <url><loc>https://www.360revenue.in/keywords/affiliate%20marketing</loc></url>
-  <url><loc>https://www.360revenue.in/keywords/digital%20marketing</loc></url>
-  <url><loc>https://www.360revenue.in/keywords/entrepreneurship</loc></url>
-  <url><loc>https://www.360revenue.in/keywords/remote%20work</loc></url>
-  <url><loc>https://www.360revenue.in/keywords/personal%20finance</loc></url>
-</urlset> 
+  <url><loc>https://www.360revenue.in/articles/details/Stock%20Market</loc></url>
+  <url><loc>https://www.360revenue.in/articles/details/Mutual%20Funds</loc></url>
+  <url><loc>https://www.360revenue.in/articles/details/SIP%20(Systematic%20Investment%20Plan)</loc></url>
+  <url><loc>https://www.360revenue.in/articles/details/Fixed%20Deposits</loc></url>
+  <url><loc>https://www.360revenue.in/articles/details/Government%20Bonds</loc></url>
+  <url><loc>https://www.360revenue.in/articles/details/Corporate%20Bonds</loc></url>
+  <url><loc>https://www.360revenue.in/articles/details/Gold%20Investment</loc></url>
+  <url><loc>https://www.360revenue.in/articles/details/Real%20Estate%20Investment</loc></url>
+  <url><loc>https://www.360revenue.in/articles/details/PPF%20(Public%20Provident%20Fund)</loc></url>
+  <url><loc>https://www.360revenue.in/articles/details/ELSS%20(Equity%20Linked%20Savings%20Scheme)</loc></url>
+  <url><loc>https://www.360revenue.in/articles/details/Index%20Funds</loc></url>
+  <url><loc>https://www.360revenue.in/articles/details/Dividend%20Stocks</loc></url>
+  <url><loc>https://www.360revenue.in/articles/details/Corporate%20Bonds%20Investment</loc></url>
+  <url><loc>https://www.360revenue.in/articles/details/ELSS%20Investment</loc></url>
+  <url><loc>https://www.360revenue.in/articles/details/Index%20Funds%20Investment</loc></url>
+  <url><loc>https://www.360revenue.in/articles/details/Dividend%20Stocks%20Investment</loc></url>
+  <url><loc>https://www.360revenue.in/articles/details/Freelancing</loc></url>
+  <url><loc>https://www.360revenue.in/articles/details/Online%20Business</loc></url>
+  <url><loc>https://www.360revenue.in/articles/details/Consulting</loc></url>
+  <url><loc>https://www.360revenue.in/articles/details/Digital%20Products</loc></url>
+  <url><loc>https://www.360revenue.in/articles/details/Affiliate%20Marketing</loc></url>
+  <url><loc>https://www.360revenue.in/articles/details/YouTube%20Channel</loc></url>
+  <url><loc>https://www.360revenue.in/articles/details/Blog%20Monetization</loc></url>
+  <url><loc>https://www.360revenue.in/articles/details/Social%20Media%20Management</loc></url>
+  <url><loc>https://www.360revenue.in/articles/details/Virtual%20Assistant</loc></url>
+  <url><loc>https://www.360revenue.in/articles/details/Online%20Tutoring</loc></url>
+  <url><loc>https://www.360revenue.in/articles/details/Graphic%20Design</loc></url>
+  <url><loc>https://www.360revenue.in/articles/details/Content%20Writing</loc></url>
+  <url><loc>https://www.360revenue.in/articles/details/High-Yield%20Savings%20Account</loc></url>
+  <url><loc>https://www.360revenue.in/articles/details/Money%20Market%20Account</loc></url>
+  <url><loc>https://www.360revenue.in/articles/details/Certificate%20of%20Deposits%20(CD)</loc></url>
+  <url><loc>https://www.360revenue.in/articles/details/Treasury%20Bills</loc></url>
+  <url><loc>https://www.360revenue.in/articles/details/Liquid%20Funds</loc></url>
+  <url><loc>https://www.360revenue.in/articles/details/Short-term%20Bonds</loc></url>
+  <url><loc>https://www.360revenue.in/articles/details/Savings%20Bank%20Account</loc></url>
+  <url><loc>https://www.360revenue.in/articles/details/Recurring%20Deposits</loc></url>
+  <url><loc>https://www.360revenue.in/articles/details/Emergency%20Fund%20Planning</loc></url>
+  <url><loc>https://www.360revenue.in/articles/details/Auto-Save%20Features</loc></url>
+  <url><loc>https://www.360revenue.in/articles/details/Round-up%20Savings</loc></url>
+  <url><loc>https://www.360revenue.in/articles/details/Goal-based%20Savings</loc></url>
+  <url><loc>https://www.360revenue.in/articles/details/Expense%20Tracking%20Apps</loc></url>
+  <url><loc>https://www.360revenue.in/articles/details/50%2F30%2F20%20Rule</loc></url>
+  <url><loc>https://www.360revenue.in/articles/details/Zero-Based%20Budgeting</loc></url>
+  <url><loc>https://www.360revenue.in/articles/details/Envelope%20Method</loc></url>
+  <url><loc>https://www.360revenue.in/articles/details/Pay%20Yourself%20First</loc></url>
+  <url><loc>https://www.360revenue.in/articles/details/Automated%20Savings</loc></url>
+  <url><loc>https://www.360revenue.in/articles/details/Budget%20Spreadsheets</loc></url>
+  <url><loc>https://www.360revenue.in/articles/details/Cash%20Flow%20Management</loc></url>
+  <url><loc>https://www.360revenue.in/articles/details/Debt%20Snowball%20Method</loc></url>
+  <url><loc>https://www.360revenue.in/articles/details/Emergency%20Fund%20Building</loc></url>
+  <url><loc>https://www.360revenue.in/articles/details/Investment%20Allocation</loc></url>
+  <url><loc>https://www.360revenue.in/articles/details/Financial%20Goal%20Setting</loc></url>
+  <url><loc>https://www.360revenue.in/articles/details/Debt%20Consolidation</loc></url>
+  <url><loc>https://www.360revenue.in/articles/details/Balance%20Transfer%20Cards</loc></url>
+  <url><loc>https://www.360revenue.in/articles/details/Debt%20Avalanche%20Method</loc></url>
+  <url><loc>https://www.360revenue.in/articles/details/Personal%20Loans</loc></url>
+  <url><loc>https://www.360revenue.in/articles/details/Credit%20Counseling</loc></url>
+  <url><loc>https://www.360revenue.in/articles/details/Side%20Income%20for%20Debt%20Payment</loc></url>
+  <url><loc>https://www.360revenue.in/articles/details/Expense%20Reduction</loc></url>
+  <url><loc>https://www.360revenue.in/articles/details/Negotiating%20with%20Creditors</loc></url>
+  <url><loc>https://www.360revenue.in/articles/details/Refinancing%20Options</loc></url>
+  <url><loc>https://www.360revenue.in/articles/details/Extra%20Payment%20Strategy</loc></url>
+  <url><loc>https://www.360revenue.in/articles/details/Financial%20Therapy</loc></url>
+  <url><loc>https://www.360revenue.in/articles/details/Expens%20Tracking%20Apps</loc></url>
+  <url><loc>https://www.360revenue.in/articles/details/Investment%20Apps</loc></url>
+  <url><loc>https://www.360revenue.in/articles/details/Budgeting%20Tools</loc></url>
+  <url><loc>https://www.360revenue.in/articles/details/Cashback%20Apps</loc></url>
+  <url><loc>https://www.360revenue.in/articles/details/Coupon%20Apps</loc></url>
+  <url><loc>https://www.360revenue.in/articles/details/Bill%20Reminder%20Apps</loc></url>
+  <url><loc>https://www.360revenue.in/articles/details/Savings%20Challenge%20Apps</loc></url>
+  <url><loc>https://www.360revenue.in/articles/details/Credit%20Score%20Monitoring</loc></url>
+  <url><loc>https://www.360revenue.in/articles/details/Receipt%20Scanning%20Apps</loc></url>
+  <url><loc>https://www.360revenue.in/articles/details/Price%20Comparison%20Apps</loc></url>
+  <url><loc>https://www.360revenue.in/articles/details/Subscription%20Management</loc></url>
+  <url><loc>https://www.360revenue.in/articles/details/Financial%20Planning%20Tools</loc></url>
+  <url><loc>https://www.360revenue.in/articles/details/Babysitting</loc></url>
+  <url><loc>https://www.360revenue.in/articles/details/Pet%20Sitting</loc></url>
+  <url><loc>https://www.360revenue.in/articles/details/Tutoring</loc></url>
+  <url><loc>https://www.360revenue.in/articles/details/Online%20Surveys</loc></url>
+  <url><loc>https://www.360revenue.in/articles/details/Content%20Creation</loc></url>
+  <url><loc>https://www.360revenue.in/articles/details/Lawn%20Care</loc></url>
+  <url><loc>https://www.360revenue.in/articles/details/House%20Cleaning</loc></url>
+  <url><loc>https://www.360revenue.in/articles/details/Car%20Washing</loc></url>
+  <url><loc>https://www.360revenue.in/articles/details/Teen%20Social%20Media%20Management</loc></url>
+  <url><loc>https://www.360revenue.in/articles/details/Teen%20Virtual%20Assistant</loc></url>
+  <url><loc>https://www.360revenue.in/articles/details/Teen%20Online%20Tutoring</loc></url>
+  <url><loc>https://www.360revenue.in/articles/details/Event%20Planning</loc></url>
+  <url><loc>https://www.360revenue.in/articles/details/App%20Testing</loc></url>
+</urlset>
