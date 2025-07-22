@@ -14,6 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://www.360revenue.in'),
   title: "360revenue - Personal Finance & Earning Money Online",
   description: "Discover proven strategies to earn money online, build wealth, and achieve financial freedom. Expert guides on investing, side hustles, budgeting, and personal finance.",
   keywords: "earn money online, personal finance, investing, budgeting, saving, side hustles, debt management, financial freedom, 360revenue",
