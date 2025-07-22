@@ -5302,220 +5302,6 @@ export const investingMethods: Record<string, MethodDetail2> = {
   relatedMethods: ["Financial Planning", "Budgeting", "Automatic Savings", "Investment Planning"]
 },
 
- "Expense Tracking Apps": {
-    title: "Expense Tracking Applications",
-        seoKeywords: [
-      "expense tracking apps",
-      "budget tracking apps",
-      "money management apps",
-      "expense tracker India",
-      "personal finance apps",
-      "budgeting apps",
-      "expense tracking tools",
-      "financial management apps"
-    ],
-    description: "Use mobile apps to track and categorize all your expenses automatically",
-    potential: "Money Awareness & Control",
-    difficulty: DifficultyLevel.VERY_EASY,
-    timeToStart: "Same day",
-    requirements: ["Smartphone", "Bank Account Access", "Consistent Usage", "Category Setup"],
-    image: "/images/methods/expense-tracking-apps.jpg",
-    category: ArticleCategory.BUDGETING,
-    slug: "expense-tracking-apps",
-    content: createMethodContent({
-      introduction: "Expense tracking apps are digital tools that automatically monitor, categorize, and analyze your spending patterns by connecting to your bank accounts and credit cards. These apps provide real-time insights into where your money goes, help identify spending trends, and enable better financial decision-making. By automating the tedious process of manual expense tracking, these apps make it easier to stay aware of your financial habits and maintain control over your budget.",
-      
-      howItWorks: "Expense tracking apps connect securely to your bank accounts, credit cards, and other financial institutions to automatically import and categorize transactions. Using machine learning and preset rules, they sort expenses into categories like food, transportation, entertainment, and utilities. Most apps provide visual reports, spending alerts, and budget tracking features. You can manually adjust categories, add cash transactions, and set up custom budgets to monitor your progress toward financial goals.",
-      
-      gettingStarted: [
-        "Research and choose an expense tracking app that fits your needs and security requirements",
-        "Download the app and create an account with strong password protection",
-        "Connect your primary bank accounts, credit cards, and investment accounts securely",
-        "Review and customize expense categories to match your spending patterns",
-        "Set up budgets for different categories based on your income and financial goals",
-        "Enable notifications for unusual spending, budget overages, or low account balances",
-        "Manually add any cash transactions or accounts not automatically synced",
-        "Review weekly spending reports and monthly summaries to understand patterns",
-        "Adjust categories and budgets based on actual spending data and insights"
-      ],
-      
-      pros: [
-        "Automatic transaction import eliminates manual data entry and saves significant time",
-        "Real-time spending alerts help prevent budget overages and impulse purchases",
-        "Visual reports and charts make it easy to understand spending patterns and trends",
-        "Historical data analysis helps identify areas for potential cost reduction",
-        "Multiple account aggregation provides complete financial picture in one place",
-        "Category-based budgeting enables targeted spending control and goal achievement",
-        "Mobile accessibility allows spending awareness and control anywhere, anytime",
-        "Automated insights reveal spending habits you might not notice manually",
-        "Goal tracking features help maintain motivation for financial objectives",
-        "Export capabilities allow integration with other financial planning tools"
-      ],
-      
-      cons: [
-        "Security concerns about sharing bank account credentials with third-party applications",
-        "Monthly subscription fees for premium features can add up over time",
-        "Automatic categorization errors require manual review and correction",
-        "Cash transactions must be entered manually, creating potential tracking gaps",
-        "Dependence on technology means app outages can disrupt expense monitoring",
-        "Privacy concerns about personal financial data being stored and analyzed",
-        "May not work well with all banks or credit unions, especially smaller institutions",
-        "Overwhelming amount of data and notifications can lead to analysis paralysis",
-        "False sense of control if tracking doesn't lead to actual behavior changes",
-        "Limited customization options in some apps may not fit unique budgeting needs"
-      ],
-      
-      tips: [
-        "Start with free versions to test functionality before committing to paid subscriptions",
-        "Review and correct categorization errors weekly to maintain accurate spending data",
-        "Set up meaningful budget categories that align with your actual spending patterns",
-        "Use spending alerts strategically to catch overspending before it becomes problematic",
-        "Manually track cash transactions immediately to avoid forgetting them later",
-        "Review monthly reports to identify trends and opportunities for improvement",
-        "Connect all relevant accounts for comprehensive financial tracking and analysis",
-        "Customize notifications to avoid alert fatigue while maintaining useful warnings",
-        "Export data regularly for backup and integration with other financial tools",
-        "Focus on actionable insights rather than getting lost in detailed transaction data"
-      ],
-      
-      commonMistakes: [
-        "Not reviewing and correcting automatic categorization errors regularly",
-        "Setting unrealistic budget amounts that don't reflect actual spending needs",
-        "Ignoring the insights and reports, treating the app as just a transaction log",
-        "Failing to manually add cash transactions, creating incomplete spending picture",
-        "Over-relying on the app without developing underlying budgeting discipline",
-        "Not updating budgets and categories as life circumstances change",
-        "Choosing apps based on features rather than security and privacy considerations",
-        "Enabling too many notifications leading to alert fatigue and eventual ignorance",
-        "Not using historical data to identify patterns and make proactive changes",
-        "Expecting the app alone to improve finances without taking action on insights"
-      ],
-      
-      resources: [
-        "Mint - Comprehensive free expense tracking with budgeting and credit monitoring",
-        "YNAB (You Need A Budget) - Zero-based budgeting app with expense tracking",
-        "Personal Capital - Expense tracking combined with investment and net worth monitoring",
-        "PocketGuard - Simple expense tracking focused on preventing overspending",
-        "Goodbudget - Envelope budgeting system with expense tracking capabilities",
-        "Tiller - Spreadsheet-based expense tracking with automatic transaction import",
-        "Honeydue - Expense tracking designed for couples and shared financial management",
-        "Clarity Money - AI-powered expense tracking with spending optimization suggestions",
-        "Bank mobile apps - Many banks now offer built-in expense tracking features",
-        "Credit card apps - Card issuers often provide spending analysis and category tracking"
-      ],
-      
-      conclusion: "Expense tracking apps serve as powerful tools for gaining financial awareness and maintaining budget control through automated monitoring and insightful analysis. While they can't replace good financial habits, they make it significantly easier to understand spending patterns, identify improvement opportunities, and stay accountable to financial goals. The key is choosing a secure, reliable app that fits your needs and using the insights it provides to make informed decisions about your spending and saving habits."
-    }),
-    relatedMethods: ["Budgeting Apps", "Financial Planning Software", "Cash Flow Management", "Digital Banking"]
-  },
-
-  "50/30/20 Rule": {
-    title: "50/30/20 Budgeting Rule",
-    seoKeywords: [
-      "50/30/20 budgeting rule",
-      "what is 50/30/20 budgeting rule",
-      "how to use 50/30/20 budgeting rule",
-      "where to apply 50/30/20 rule",
-      "when to use 50/30/20 budgeting",
-      "why use 50/30/20 budgeting rule",
-      "which expenses fit 50/30/20 rule",
-      "50/30/20 budgeting strategy"
-    ],
-    description: "Allocate 50% needs, 30% wants, and 20% savings for balanced budgeting",
-    potential: "Financial Balance & Simplicity",
-    difficulty: DifficultyLevel.EASY,
-    timeToStart: "Immediate",
-    requirements: ["Income Calculation", "Expense Categorization", "Discipline", "Monthly Review"],
-    image: "/images/methods/50-30-20-rule.jpg",
-    category: ArticleCategory.BUDGETING,
-    slug: "50-30-20-budgeting-rule",
-    content: createMethodContent({
-      introduction: "The 50/30/20 rule is a simple budgeting framework that allocates after-tax income into three categories: 50% for needs (essential expenses), 30% for wants (discretionary spending), and 20% for savings and debt repayment. This approach provides a balanced framework for managing money without the complexity of detailed budget categories, making it ideal for budgeting beginners or those who prefer straightforward financial management systems.",
-      
-      howItWorks: "You calculate your monthly after-tax income and divide it according to the three percentages. Needs include housing, utilities, groceries, minimum debt payments, and insurance. Wants cover dining out, entertainment, hobbies, and non-essential shopping. The savings portion goes toward emergency funds, retirement contributions, and extra debt payments. The rule provides flexibility within each category while maintaining overall financial balance and ensuring consistent saving.",
-      
-      gettingStarted: [
-        "Calculate your total monthly after-tax income from all sources",
-        "List all essential expenses (needs) and calculate if they fit within 50% of income",
-        "Identify discretionary expenses (wants) and plan them within 30% allocation",
-        "Determine how to allocate the 20% savings between emergency fund, retirement, and debt payoff",
-        "Track expenses for the first month to see how actual spending compares to targets",
-        "Adjust spending in overspent categories and redirect money to underspent areas",
-        "Set up automatic transfers for the 20% savings to remove temptation",
-        "Review monthly performance and make adjustments for the following month",
-        "Consider income increases or expense reductions if needs exceed 50% threshold"
-      ],
-      
-      pros: [
-        "Simple three-category system that's easy to understand and implement",
-        "Balanced approach ensuring both current enjoyment and future financial security",
-        "Flexible framework allowing personal choice within each spending category",
-        "Automatic savings component builds wealth and financial resilience over time",
-        "Suitable for various income levels and life stages with minor adjustments",
-        "Reduces decision fatigue compared to complex budgeting systems with many categories",
-        "Provides clear guidelines for spending without micromanaging every purchase",
-        "Encourages lifestyle evaluation and conscious spending decisions",
-        "Easy to track progress and adjust as income or circumstances change",
-        "Creates foundation for more advanced budgeting techniques later"
-      ],
-      
-      cons: [
-        "May not work for very low incomes where needs exceed 50% threshold",
-        "Oversimplified approach may miss important nuances in personal financial situations",
-        "Rigid percentages don't account for varying life circumstances or goals",
-        "High-cost living areas may make 50% needs allocation unrealistic",
-        "Doesn't prioritize high-interest debt payoff over general savings",
-        "May not provide enough detail for people with complex financial situations",
-        "Could lead to lifestyle inflation if wants consistently consume full 30%",
-        "Doesn't account for irregular income or seasonal expense variations",
-        "May not emphasize emergency fund building enough for financial beginners",
-        "One-size-fits-all approach may not optimize for individual financial goals"
-      ],
-      
-      tips: [
-        "Adjust percentages based on your situation (40/30/30 if needs are lower, 60/20/20 if higher)",
-        "Prioritize building emergency fund before other savings if you don't have one",
-        "Review and recategorize expenses honestly - some wants might be miscategorized as needs",
-        "Use the 20% savings strategically: emergency fund first, then retirement and debt payoff",
-        "Track spending for a few months to understand your true needs vs. wants patterns",
-        "Automate the 20% savings immediately after receiving income to ensure consistency",
-        "Be flexible with monthly variations while maintaining the overall percentage targets",
-        "Consider increasing savings percentage during high-income periods or windfalls",
-        "Use the framework as starting point, then customize based on your specific goals",
-        "Review annually and adjust percentages as income, expenses, and priorities change"
-      ],
-      
-      commonMistakes: [
-        "Miscategorizing wants as needs to justify overspending on discretionary items",
-        "Not adjusting percentages when income is too low for needs to fit in 50%",
-        "Treating the 30% wants as mandatory spending rather than maximum allowance",
-        "Not prioritizing emergency fund and high-interest debt within the 20% savings",
-        "Expecting perfect adherence immediately without allowing for learning and adjustment",
-        "Not tracking actual spending to see how it compares to the planned percentages",
-        "Using gross income instead of after-tax income for percentage calculations",
-        "Not accounting for irregular expenses like annual insurance payments or taxes",
-        "Abandoning the system after one difficult month instead of making adjustments",
-        "Not automating savings, making it easy to skip the 20% allocation"
-      ],
-      
-      resources: [
-        "Budgeting apps that support 50/30/20 allocation like Mint or YNAB",
-        "Online calculators for determining appropriate amounts for each category",
-        "Elizabeth Warren's book 'All Your Worth' which popularized this budgeting method",
-        "Personal finance blogs and websites with 50/30/20 implementation guides",
-        "Spreadsheet templates designed specifically for 50/30/20 budget tracking",
-        "Mobile banking apps that allow automatic transfers for savings allocation",
-        "Financial advisors who can help customize percentages for your situation",
-        "Expense tracking tools to monitor spending within each category",
-        "Investment platforms for managing the 20% savings and retirement contributions",
-        "Debt payoff calculators to optimize the debt repayment portion of savings"
-      ],
-      
-      conclusion: "The 50/30/20 rule provides an excellent starting point for budget management, offering simplicity and balance without overwhelming complexity. While it may not be perfect for every situation, it establishes healthy financial habits and can be customized to fit individual circumstances. The key is using it as a framework rather than rigid law, adjusting percentages as needed while maintaining the core principle of balancing current needs, wants, and future financial security."
-    }),
-    relatedMethods: ["Basic Budgeting", "Percentage-Based Budgeting", "Automated Savings", "Financial Planning"]
-  },
-
   "Zero-Based Budgeting": {
     title: "Zero-Based Budget Method",
     seoKeywords: [
@@ -9046,8 +8832,491 @@ export const investingMethods: Record<string, MethodDetail2> = {
       conclusion: "Comprehensive financial planning apps provide powerful tools for creating and maintaining sophisticated financial strategies that were previously available only through expensive professional advisors. While these tools require significant setup time and ongoing maintenance, they can dramatically improve long-term financial outcomes through optimized saving, investing, and tax strategies. The key is choosing appropriate complexity levels for your situation and using these tools to enhance rather than replace fundamental financial discipline and education."
     }),
     relatedMethods: ["Retirement Planning", "Investment Management", "Goal-Based Planning", "Wealth Building"]
+  },
+
+  // Teen Income Methods
+  "Babysitting": {
+    title: "Babysitting Services",
+    seoKeywords: [
+      "babysitting for teens",
+      "how to start babysitting",
+      "teen babysitting jobs",
+      "babysitting business",
+      "childcare services",
+      "teen income opportunities",
+      "babysitting rates",
+      "babysitting tips"
+    ],
+    description: "Provide childcare services for families in your community",
+    potential: "$10-$20 per hour",
+    difficulty: DifficultyLevel.EASY,
+    timeToStart: "1-2 days",
+    requirements: ["Responsibility", "Patience", "Basic childcare knowledge", "First aid certification (recommended)"],
+    image: "/images/methods/babysitting.jpg",
+    category: ArticleCategory.TEEN_INCOME,
+    slug: "babysitting",
+    content: createMethodContent({
+      introduction: "Babysitting is a classic and reliable way for teenagers to earn money while developing valuable life skills.",
+      howItWorks: "Provide childcare services for families in your community, typically during evenings, weekends, or when parents need assistance.",
+      gettingStarted: [
+        "Get certified in CPR and first aid",
+        "Create a simple resume highlighting your experience",
+        "Start with family friends and neighbors",
+        "Join local babysitting groups on social media",
+        "Set clear rates and expectations"
+      ],
+      pros: ["Flexible hours", "Good hourly rate", "Builds responsibility", "No startup costs", "Valuable life skills"],
+      cons: ["Requires patience", "Can be stressful", "Limited to available families", "May need transportation"],
+      tips: ["Always arrive early", "Follow parents' rules exactly", "Bring age-appropriate activities", "Build relationships for repeat business"],
+      commonMistakes: ["Being late or canceling last minute", "Not following instructions", "Being on phone instead of engaging with kids"],
+      resources: ["Red Cross babysitting courses", "Local community centers", "Social media groups", "Word of mouth referrals"],
+      conclusion: "Babysitting is an excellent starting point for teen income with minimal barriers to entry."
+    }),
+    relatedMethods: ["Pet Sitting", "Tutoring", "House Sitting", "Event Planning"]
+  },
+
+  "Pet Sitting": {
+    title: "Pet Sitting Services",
+    seoKeywords: [
+      "pet sitting for teens",
+      "dog walking services",
+      "teen pet sitting jobs",
+      "pet care business",
+      "animal care services",
+      "teen income ideas"
+    ],
+    description: "Care for pets while their owners are away",
+    potential: "$15-$30 per visit",
+    difficulty: DifficultyLevel.EASY,
+    timeToStart: "1-2 days",
+    requirements: ["Love for animals", "Reliability", "Basic pet care knowledge"],
+    image: "/images/methods/pet-sitting.jpg",
+    category: ArticleCategory.TEEN_INCOME,
+    slug: "pet-sitting",
+    content: createMethodContent({
+      introduction: "Pet sitting allows you to earn money while spending time with animals.",
+      howItWorks: "Visit pets at their homes or host them at yours while owners are away.",
+      gettingStarted: [
+        "Learn about different types of pets and their needs",
+        "Start with friends' and neighbors' pets",
+        "Create a service menu with rates",
+        "Build a network of pet owners"
+      ],
+      pros: ["Work with animals", "Flexible schedule", "Good hourly rate", "Low stress"],
+      cons: ["Requires transportation", "Can be unpredictable", "Need to handle emergencies"],
+      tips: ["Always meet pets before accepting jobs", "Keep detailed records", "Have emergency contacts"],
+      commonMistakes: ["Not understanding pet needs", "Being unreliable", "Not having backup plans"],
+      resources: ["Pet care books", "Veterinary resources", "Pet sitting apps", "Local pet communities"],
+      conclusion: "Pet sitting is perfect for animal-loving teens who want flexible income."
+    }),
+    relatedMethods: ["Babysitting", "House Sitting", "Dog Walking", "Pet Grooming"]
+  },
+
+  "Tutoring": {
+    title: "Academic Tutoring Services",
+    seoKeywords: [
+      "tutoring for teens",
+      "academic tutoring",
+      "teen tutoring jobs",
+      "online tutoring",
+      "subject tutoring",
+      "teen income opportunities"
+    ],
+    description: "Help other students with academic subjects you excel in",
+    potential: "$15-$40 per hour",
+    difficulty: DifficultyLevel.EASY,
+    timeToStart: "1-3 days",
+    requirements: ["Strong academic performance", "Teaching ability", "Patience", "Subject expertise"],
+    image: "/images/methods/tutoring.jpg",
+    category: ArticleCategory.TEEN_INCOME,
+    slug: "tutoring",
+    content: createMethodContent({
+      introduction: "Tutoring allows you to monetize your academic strengths while helping others succeed.",
+      howItWorks: "Provide one-on-one or small group instruction in subjects you excel at.",
+      gettingStarted: [
+        "Identify your strongest subjects",
+        "Create a simple tutoring profile",
+        "Start with friends and classmates",
+        "Set competitive rates",
+        "Prepare teaching materials"
+      ],
+      pros: ["Good hourly rate", "Flexible schedule", "Builds teaching skills", "Helps others", "Reinforces your knowledge"],
+      cons: ["Requires preparation time", "Need to handle different learning styles", "May need transportation"],
+      tips: ["Adapt to student's learning style", "Prepare materials in advance", "Be patient and encouraging"],
+      commonMistakes: ["Not preparing adequately", "Being impatient with students", "Charging too much or too little"],
+      resources: ["Online tutoring platforms", "Educational websites", "Local schools", "Community centers"],
+      conclusion: "Tutoring is excellent for academically strong teens who enjoy teaching."
+    }),
+    relatedMethods: ["Online Teaching", "Test Preparation", "Language Teaching", "Academic Coaching"]
+  },
+
+  "Online Surveys": {
+    title: "Online Survey Participation",
+    seoKeywords: [
+      "online surveys for teens",
+      "paid surveys",
+      "survey sites for teens",
+      "teen survey income",
+      "market research surveys"
+    ],
+    description: "Complete online surveys and market research studies for money",
+    potential: "$3-$8 per hour",
+    difficulty: DifficultyLevel.VERY_EASY,
+    timeToStart: "1 day",
+    requirements: ["Internet access", "Patience", "Honest responses", "Multiple accounts"],
+    image: "/images/methods/online-surveys.jpg",
+    category: ArticleCategory.TEEN_INCOME,
+    slug: "online-surveys",
+    content: createMethodContent({
+      introduction: "Online surveys provide easy income with minimal effort and no special skills required.",
+      howItWorks: "Sign up for survey platforms and complete questionnaires for cash or gift cards.",
+      gettingStarted: [
+        "Join multiple legitimate survey sites",
+        "Complete your profile thoroughly",
+        "Set aside time daily for surveys",
+        "Track your earnings",
+        "Cash out regularly"
+      ],
+      pros: ["No special skills needed", "Can do anywhere", "Flexible time commitment", "No startup costs"],
+      cons: ["Low hourly rate", "Can be repetitive", "May not qualify for all surveys"],
+      tips: ["Be honest in responses", "Join multiple platforms", "Complete profiles fully"],
+      commonMistakes: ["Rushing through surveys", "Not completing profiles", "Expecting high earnings"],
+      resources: ["Survey Junkie", "Swagbucks", "Pinecone Research", "YouGov"],
+      conclusion: "Perfect for teens wanting easy income during free time."
+    }),
+    relatedMethods: ["Focus Groups", "Product Testing", "User Testing", "Market Research"]
+  },
+
+  "Content Creation": {
+    title: "Content Creation & Social Media",
+    seoKeywords: [
+      "content creation for teens",
+      "social media income",
+      "teen content creator",
+      "YouTube for teens",
+      "blogging for teens"
+    ],
+    description: "Create content for social media platforms and monetize your audience",
+    potential: "$100-$1000+ per month",
+    difficulty: DifficultyLevel.MEDIUM,
+    timeToStart: "1-2 weeks",
+    requirements: ["Creativity", "Consistency", "Social media knowledge", "Content creation skills"],
+    image: "/images/methods/content-creation.jpg",
+    category: ArticleCategory.TEEN_INCOME,
+    slug: "content-creation",
+    content: createMethodContent({
+      introduction: "Content creation allows you to build an audience and monetize your creativity.",
+      howItWorks: "Create engaging content on platforms like YouTube, TikTok, or Instagram and monetize through ads, sponsorships, and affiliate marketing.",
+      gettingStarted: [
+        "Choose your niche and platform",
+        "Create consistent content schedule",
+        "Learn basic editing skills",
+        "Engage with your audience",
+        "Monetize through multiple streams"
+      ],
+      pros: ["High earning potential", "Creative outlet", "Build personal brand", "Flexible schedule"],
+      cons: ["Takes time to build audience", "Requires consistency", "Competitive field"],
+      tips: ["Post consistently", "Engage with audience", "Collaborate with others", "Diversify income streams"],
+      commonMistakes: ["Inconsistent posting", "Not engaging with audience", "Giving up too early"],
+      resources: ["YouTube Creator Academy", "Social media courses", "Editing software", "Analytics tools"],
+      conclusion: "Content creation offers long-term income potential for creative teens."
+    }),
+    relatedMethods: ["Social Media Management", "Video Editing", "Photography", "Influencer Marketing"]
+  },
+
+
+
+  "Lawn Care": {
+    title: "Lawn Care & Landscaping",
+    seoKeywords: [
+      "lawn care for teens",
+      "teen landscaping jobs",
+      "yard work for teens",
+      "lawn mowing business"
+    ],
+    description: "Provide lawn maintenance and landscaping services",
+    potential: "$20-$50 per job",
+    difficulty: DifficultyLevel.EASY,
+    timeToStart: "1-3 days",
+    requirements: ["Physical fitness", "Basic equipment", "Reliability", "Weather awareness"],
+    image: "/images/methods/lawn-care.jpg",
+    category: ArticleCategory.TEEN_INCOME,
+    slug: "lawn-care",
+    content: createMethodContent({
+      introduction: "Lawn care services are in high demand and provide good income for physically active teens.",
+      howItWorks: "Offer lawn mowing, trimming, and basic landscaping services to homeowners.",
+      gettingStarted: [
+        "Acquire basic equipment",
+        "Start with neighbors and family",
+        "Set competitive rates",
+        "Build client base",
+        "Expand services"
+      ],
+      pros: ["Good income potential", "Physical exercise", "Outdoor work", "Flexible schedule"],
+      cons: ["Weather dependent", "Physical labor", "Equipment costs"],
+      tips: ["Be reliable and punctual", "Do quality work", "Build relationships", "Expand services"],
+      commonMistakes: ["Poor quality work", "Unreliable service", "Not having backup equipment"],
+      resources: ["Local hardware stores", "Landscaping guides", "Equipment suppliers", "Community groups"],
+      conclusion: "Lawn care is perfect for active teens who enjoy outdoor work."
+    }),
+    relatedMethods: ["House Cleaning", "Car Washing", "Snow Removal", "Garden Maintenance"]
+  },
+
+  "House Cleaning": {
+    title: "House Cleaning Services",
+    seoKeywords: [
+      "house cleaning for teens",
+      "teen cleaning jobs",
+      "cleaning services",
+      "housekeeping for teens"
+    ],
+    description: "Provide house cleaning and organization services",
+    potential: "$15-$30 per hour",
+    difficulty: DifficultyLevel.EASY,
+    timeToStart: "1-2 days",
+    requirements: ["Attention to detail", "Reliability", "Cleaning supplies", "Transportation"],
+    image: "/images/methods/house-cleaning.jpg",
+    category: ArticleCategory.TEEN_INCOME,
+    slug: "house-cleaning",
+    content: createMethodContent({
+      introduction: "House cleaning services are always in demand and provide steady income.",
+      howItWorks: "Offer regular or one-time cleaning services to homeowners and renters.",
+      gettingStarted: [
+        "Gather cleaning supplies",
+        "Start with family and friends",
+        "Create service packages",
+        "Set competitive rates",
+        "Build client base"
+      ],
+      pros: ["Steady demand", "Good hourly rate", "Flexible schedule", "No special skills needed"],
+      cons: ["Physical work", "Need transportation", "May need supplies"],
+      tips: ["Be thorough and reliable", "Use quality products", "Build trust", "Offer regular service"],
+      commonMistakes: ["Rushing through work", "Using poor quality supplies", "Being unreliable"],
+      resources: ["Cleaning supply stores", "Professional cleaning guides", "Local community groups"],
+      conclusion: "House cleaning provides reliable income for detail-oriented teens."
+    }),
+    relatedMethods: ["Lawn Care", "Car Washing", "Window Cleaning", "Organization Services"]
+  },
+
+  "Car Washing": {
+    title: "Car Washing & Detailing",
+    seoKeywords: [
+      "car washing for teens",
+      "teen car wash business",
+      "car detailing services",
+      "mobile car wash"
+    ],
+    description: "Provide car washing and detailing services",
+    potential: "$20-$100 per car",
+    difficulty: DifficultyLevel.EASY,
+    timeToStart: "1-2 days",
+    requirements: ["Attention to detail", "Basic supplies", "Reliability", "Transportation"],
+    image: "/images/methods/car-washing.jpg",
+    category: ArticleCategory.TEEN_INCOME,
+    slug: "car-washing",
+    content: createMethodContent({
+      introduction: "Car washing and detailing services offer good income potential with relatively low startup costs.",
+      howItWorks: "Offer mobile car washing and detailing services to car owners.",
+      gettingStarted: [
+        "Gather basic supplies",
+        "Learn proper techniques",
+        "Start with family and neighbors",
+        "Set competitive rates",
+        "Build client base"
+      ],
+      pros: ["Good income potential", "Flexible schedule", "Outdoor work", "Low startup costs"],
+      cons: ["Weather dependent", "Physical work", "Need transportation"],
+      tips: ["Do quality work", "Be reliable", "Build relationships", "Offer different service levels"],
+      commonMistakes: ["Poor quality work", "Not having proper supplies", "Being unreliable"],
+      resources: ["Car care guides", "Professional supplies", "Local car communities"],
+      conclusion: "Car washing is excellent for teens who enjoy working with cars."
+    }),
+    relatedMethods: ["Lawn Care", "House Cleaning", "Window Cleaning", "Mobile Services"]
+  },
+
+
+
+  "Teen Social Media Management": {
+    title: "Teen Social Media Management",
+    seoKeywords: [
+      "social media management for teens",
+      "teen social media manager",
+      "social media marketing",
+      "content management"
+    ],
+    description: "Manage social media accounts for small businesses",
+    potential: "$200-$1000 per month",
+    difficulty: DifficultyLevel.MEDIUM,
+    timeToStart: "1-2 weeks",
+    requirements: ["Social media knowledge", "Content creation skills", "Communication", "Analytics understanding"],
+    image: "/images/methods/social-media-management.jpg",
+    category: ArticleCategory.TEEN_INCOME,
+    slug: "teen-social-media-management",
+    content: createMethodContent({
+      introduction: "Social media management allows you to help businesses grow their online presence.",
+      howItWorks: "Create and manage content for businesses' social media accounts.",
+      gettingStarted: [
+        "Learn social media platforms",
+        "Build your own presence",
+        "Create portfolio",
+        "Start with small businesses",
+        "Build client base"
+      ],
+      pros: ["Good income potential", "Work from home", "Build marketing skills", "Flexible schedule"],
+      cons: ["Requires skills", "Need to stay updated", "Competitive market"],
+      tips: ["Stay updated with trends", "Create engaging content", "Track analytics", "Build relationships"],
+      commonMistakes: ["Poor content quality", "Not tracking results", "Missing trends"],
+      resources: ["Social media courses", "Marketing tools", "Analytics platforms", "Design software"],
+      conclusion: "Social media management is excellent for tech-savvy teens."
+    }),
+    relatedMethods: ["Content Creation", "Digital Marketing", "Graphic Design", "Virtual Assistant"]
+  },
+
+  "Teen Virtual Assistant": {
+    title: "Teen Virtual Assistant Services",
+    seoKeywords: [
+      "virtual assistant for teens",
+      "teen virtual assistant",
+      "online assistant jobs",
+      "remote administrative work"
+    ],
+    description: "Provide administrative support to businesses remotely",
+    potential: "$10-$25 per hour",
+    difficulty: DifficultyLevel.MEDIUM,
+    timeToStart: "1-2 weeks",
+    requirements: ["Organization skills", "Communication", "Computer skills", "Reliability"],
+    image: "/images/methods/virtual-assistant.jpg",
+    category: ArticleCategory.TEEN_INCOME,
+    slug: "teen-virtual-assistant",
+    content: createMethodContent({
+      introduction: "Virtual assistance allows you to provide administrative support from anywhere.",
+      howItWorks: "Help businesses with tasks like email management, scheduling, and data entry.",
+      gettingStarted: [
+        "Identify your skills",
+        "Create professional profile",
+        "Build portfolio",
+        "Start with small tasks",
+        "Build client relationships"
+      ],
+      pros: ["Work from home", "Flexible schedule", "Build professional skills", "Good hourly rate"],
+      cons: ["Requires skills", "Need to be organized", "Competitive market"],
+      tips: ["Be organized and reliable", "Communicate clearly", "Meet deadlines", "Build relationships"],
+      commonMistakes: ["Poor communication", "Missing deadlines", "Not being organized"],
+      resources: ["Virtual assistant courses", "Online platforms", "Productivity tools", "Professional networks"],
+      conclusion: "Virtual assistance is excellent for organized teens with good communication skills."
+    }),
+    relatedMethods: ["Freelancing", "Social Media Management", "Data Entry", "Customer Service"]
+  },
+
+  "Teen Online Tutoring": {
+    title: "Teen Online Tutoring Services",
+    seoKeywords: [
+      "online tutoring for teens",
+      "teen online tutor",
+      "virtual tutoring",
+      "remote teaching"
+    ],
+    description: "Provide tutoring services online to students worldwide",
+    potential: "$15-$40 per hour",
+    difficulty: DifficultyLevel.MEDIUM,
+    timeToStart: "1-2 weeks",
+    requirements: ["Subject expertise", "Teaching ability", "Technology skills", "Reliable internet"],
+    image: "/images/methods/online-tutoring.jpg",
+    category: ArticleCategory.TEEN_INCOME,
+    slug: "teen-online-tutoring",
+    content: createMethodContent({
+      introduction: "Online tutoring allows you to reach students worldwide and monetize your knowledge.",
+      howItWorks: "Provide virtual tutoring sessions using video conferencing and online tools.",
+      gettingStarted: [
+        "Choose your subjects",
+        "Set up online presence",
+        "Create teaching materials",
+        "Start with online platforms",
+        "Build student base"
+      ],
+      pros: ["Work from anywhere", "Reach global students", "Flexible schedule", "Good hourly rate"],
+      cons: ["Requires technology", "Need reliable internet", "Time zone differences"],
+      tips: ["Use engaging tools", "Be patient with students", "Prepare materials", "Build relationships"],
+      commonMistakes: ["Poor technology setup", "Not preparing adequately", "Being impatient"],
+      resources: ["Online tutoring platforms", "Teaching tools", "Video conferencing software", "Educational resources"],
+      conclusion: "Online tutoring is perfect for academically strong teens with good technology skills."
+    }),
+    relatedMethods: ["Tutoring", "Online Teaching", "Test Preparation", "Language Teaching"]
+  },
+
+  "Event Planning": {
+    title: "Event Planning Services",
+    seoKeywords: [
+      "event planning for teens",
+      "teen event planner",
+      "party planning",
+      "event coordination"
+    ],
+    description: "Plan and coordinate events for clients",
+    potential: "$100-$1000 per event",
+    difficulty: DifficultyLevel.HARD,
+    timeToStart: "2-4 weeks",
+    requirements: ["Organization skills", "Creativity", "Communication", "Problem-solving"],
+    image: "/images/methods/event-planning.jpg",
+    category: ArticleCategory.TEEN_INCOME,
+    slug: "event-planning",
+    content: createMethodContent({
+      introduction: "Event planning allows you to create memorable experiences while earning income.",
+      howItWorks: "Plan and coordinate events like parties, school functions, and special occasions.",
+      gettingStarted: [
+        "Start with small events",
+        "Build portfolio",
+        "Network with vendors",
+        "Create service packages",
+        "Market your services"
+      ],
+      pros: ["Creative outlet", "High income potential", "Build relationships", "Flexible schedule"],
+      cons: ["Requires experience", "High stress", "Need to handle problems"],
+      tips: ["Start small", "Build relationships", "Have backup plans", "Stay organized"],
+      commonMistakes: ["Taking on too much", "Not having backup plans", "Poor communication"],
+      resources: ["Event planning courses", "Vendor networks", "Planning tools", "Industry resources"],
+      conclusion: "Event planning is excellent for organized, creative teens who enjoy coordinating activities."
+    }),
+    relatedMethods: ["Photography", "Catering", "Decoration Services", "Entertainment"]
+  },
+
+  "App Testing": {
+    title: "App & Website Testing",
+    seoKeywords: [
+      "app testing for teens",
+      "teen app tester",
+      "user testing",
+      "website testing"
+    ],
+    description: "Test apps and websites for companies and provide feedback",
+    potential: "$10-$25 per hour",
+    difficulty: DifficultyLevel.EASY,
+    timeToStart: "1-2 days",
+    requirements: ["Technology comfort", "Attention to detail", "Communication skills", "Reliable internet"],
+    image: "/images/methods/app-testing.jpg",
+    category: ArticleCategory.TEEN_INCOME,
+    slug: "app-testing",
+    content: createMethodContent({
+      introduction: "App testing allows you to earn money while helping improve technology products.",
+      howItWorks: "Test apps and websites and provide detailed feedback to developers.",
+      gettingStarted: [
+        "Join testing platforms",
+        "Complete your profile",
+        "Take practice tests",
+        "Build reputation",
+        "Get more opportunities"
+      ],
+      pros: ["Easy to start", "Flexible schedule", "Learn about technology", "Good hourly rate"],
+      cons: ["May not always qualify", "Need to be detailed", "Can be repetitive"],
+      tips: ["Be thorough", "Provide detailed feedback", "Follow instructions", "Build reputation"],
+      commonMistakes: ["Rushing through tests", "Not being detailed", "Not following instructions"],
+      resources: ["UserTesting", "TestBirds", "UserFeel", "Testing communities"],
+      conclusion: "App testing is perfect for tech-savvy teens who enjoy using new technology."
+    }),
+    relatedMethods: ["Online Surveys", "Focus Groups", "Product Testing", "User Research"]
   }
 };
+
 
 export const colorMapping = {
   "Investing": "bg-blue-500", // Blue for Investing

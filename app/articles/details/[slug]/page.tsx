@@ -2,7 +2,7 @@
 import React from 'react'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
-import { investingMethods } from '../../../../lib/data/artticleData'
+import { investingMethods } from '@/lib/data/artticleData'
 import {
   Card,
   CardContent,
@@ -45,25 +45,35 @@ import {
 import BackButton from '@/components/home/Readmore/backbutton'
 import { Footer } from '@/components/layout/Footer'
 import { Header } from '@/components/layout/Header'
-import { articlesData } from '@/lib/data/artticleData'
 
 type Props = { params: Promise<{ slug: string }> }
 
-export const generateMetadata = async ({ params }: { params: Promise<{ slug: string }> }) => {
-  const { slug } = await params;
-  const key = decodeURIComponent(slug);
-  const method = investingMethods[key];
-  
-  if (!method) {
-    return {
-      title: 'Method Not Found | 360° Revenue',
-      description: 'The requested method could not be found. Explore our comprehensive guides on earning money online, investing, and financial strategies.',
-    };
-  }
+// Note: This page is dynamic to handle the large data structure efficiently
 
-  const title = `How to Earn Money Online: ${method.title} | 360revenue Method, Passive Income, Side Hustles, Investing, Financial Freedom`;
-  const description = `Unlock the secrets to earning money online with this in-depth guide on ${method.title}. Discover expert strategies, actionable tips, and proven methods for building passive income, side hustles, investing, and achieving financial independence. 360revenue provides trusted resources for wealth building and online income success.`;
-  const keywords = `earn money online, ${method.title.toLowerCase()}, make money, side hustles, investing, 360revenue, passive income, remote work, digital marketing, affiliate marketing, online business, financial independence, entrepreneurship, work from home, online jobs, side hustle, make money from home, internet income, gig economy, online side hustle, extra income, financial freedom, online earning tips, wealth building, financial literacy, 360revenue article, 360revenue guide, 360revenue tips, 360revenue strategies, 360revenue resources, 360revenue blog, 360revenue insights, 360revenue analysis, 360revenue research, 360revenue trends, 360revenue best practices, 360revenue case studies, 360revenue examples, 360revenue frameworks, 360revenue models, 360revenue systems, 360revenue processes, 360revenue methods, 360revenue techniques, 360revenue plans, 360revenue workshops, 360revenue webinars, 360revenue events, 360revenue community, 360revenue forums, 360revenue groups, 360revenue clubs, 360revenue networking, 360revenue meetups, 360revenue coaching, 360revenue consulting, 360revenue support, 360revenue help, 360revenue contact, 360revenue about, 360revenue team, 360revenue partners, 360revenue affiliates, 360revenue sponsors, 360revenue press, 360revenue media, 360revenue awards, 360revenue recognition, 360revenue achievements, 360revenue milestones, 360revenue mission, 360revenue vision, 360revenue values, 360revenue goals, 360revenue roadmap, 360revenue updates, 360revenue news, 360revenue announcements`;
+export const generateMetadata = async ({ params }: { params: Promise<{ slug: string }> }) => {
+  try {
+    const { slug } = await params;
+    const key = decodeURIComponent(slug);
+    
+    // Add error handling for missing methods
+    if (!key) {
+      return {
+        title: 'Method Not Found | 360° Revenue',
+        description: 'The requested method could not be found. Explore our comprehensive guides on earning money online, investing, and financial strategies.',
+      };
+    }
+    
+    const method = investingMethods[key];
+    if (!method) {
+      return {
+        title: 'Method Not Found | 360° Revenue',
+        description: 'The requested method could not be found. Explore our comprehensive guides on earning money online, investing, and financial strategies.',
+      };
+    }
+
+  const title = `How to Earn Money Online: ${method.title || 'Online Earning Method'} | 360revenue Method, Passive Income, Side Hustles, Investing, Financial Freedom`;
+  const description = `Unlock the secrets to earning money online with this in-depth guide on ${method.title || 'online earning'}. Discover expert strategies, actionable tips, and proven methods for building passive income, side hustles, investing, and achieving financial independence. 360revenue provides trusted resources for wealth building and online income success.`;
+  const keywords = `earn money online, ${method.title?.toLowerCase() || 'online earning'}, make money, side hustles, investing, 360revenue, passive income, remote work, digital marketing, affiliate marketing, online business, financial independence, entrepreneurship, work from home, online jobs, side hustle, make money from home, internet income, gig economy, online side hustle, extra income, financial freedom, online earning tips, wealth building, financial literacy, 360revenue article, 360revenue guide, 360revenue tips, 360revenue strategies, 360revenue resources, 360revenue blog, 360revenue insights, 360revenue analysis, 360revenue research, 360revenue trends, 360revenue best practices, 360revenue case studies, 360revenue examples, 360revenue frameworks, 360revenue models, 360revenue systems, 360revenue processes, 360revenue methods, 360revenue techniques, 360revenue plans, 360revenue workshops, 360revenue webinars, 360revenue events, 360revenue community, 360revenue forums, 360revenue groups, 360revenue clubs, 360revenue networking, 360revenue meetups, 360revenue coaching, 360revenue consulting, 360revenue support, 360revenue help, 360revenue contact, 360revenue about, 360revenue team, 360revenue partners, 360revenue affiliates, 360revenue sponsors, 360revenue press, 360revenue media, 360revenue awards, 360revenue recognition, 360revenue achievements, 360revenue milestones, 360revenue mission, 360revenue vision, 360revenue values, 360revenue goals, 360revenue roadmap, 360revenue updates, 360revenue news, 360revenue announcements`;
 
   return {
     title,
@@ -79,7 +89,7 @@ export const generateMetadata = async ({ params }: { params: Promise<{ slug: str
           url: '/360revenue-og-image.png',
           width: 1200,
           height: 630,
-          alt: `${method.title} Method Guide`,
+          alt: `${method.title || 'Online Earning'} Method Guide`,
         },
       ],
       authors: ['360revenue'],
@@ -95,32 +105,61 @@ export const generateMetadata = async ({ params }: { params: Promise<{ slug: str
       canonical: `https://www.360revenue.in/articles/details/${slug}`,
     },
   };
+  } catch (error) {
+    return {
+      title: 'Method Not Found | 360° Revenue',
+      description: 'The requested method could not be found. Explore our comprehensive guides on earning money online, investing, and financial strategies.',
+    };
+  }
 };
 
 export default async function MethodPage({ params }: Props) {
-  const { slug } = await params;
-  const key = decodeURIComponent(slug);
-  const method = investingMethods[key]
-  if (!method) notFound()
+  try {
+    const { slug } = await params;
+    const key = decodeURIComponent(slug);
+    
 
-  // 2) Destructure your method object
+    
+    // Add error handling for missing methods
+    if (!key) {
+      notFound();
+    }
+    
+    const method = investingMethods[key];
+    if (!method) {
+      console.error(`Method not found for key: "${key}"`);
+      notFound();
+    }
+
+  // 2) Destructure your method object with safety checks
   const {
-    title,
-    description,
-    potential,
-    timeToStart,
-    requirements,
-    content: {
-      introduction,
-      gettingStarted,
-      pros,
-      cons,
-      tips,
-      commonMistakes,
-      resources,
-      conclusion,
+    title = 'Online Earning Method',
+    description = 'Learn how to earn money online with proven strategies and methods.',
+    potential = '$100-$1000+ per month',
+    timeToStart = '1-2 weeks',
+    requirements = [],
+    content = {
+      introduction: '',
+      gettingStarted: [],
+      pros: [],
+      cons: [],
+      tips: [],
+      commonMistakes: [],
+      resources: [],
+      conclusion: '',
     },
-  } = method
+  } = method || {};
+
+  const {
+    introduction = '',
+    gettingStarted = [],
+    pros = [],
+    cons = [],
+    tips = [],
+    commonMistakes = [],
+    resources = [],
+    conclusion = '',
+  } = content || {};
 
   // 3) Map requirement names → icons
   const requirementIcons: Record<string, React.ComponentType<any>> = {
@@ -348,15 +387,15 @@ export default async function MethodPage({ params }: Props) {
                     let paragraphContent = '';
                     
                     if (i === 0) {
-                      paragraphContent = `Getting started with ${title} begins with ${stepGroup[0].toLowerCase()}. This crucial first step involves ${stepGroup[1] ? stepGroup[1].toLowerCase() : 'conducting thorough research and preparation'}. ${stepGroup[2] ? stepGroup[2] : 'Understanding the fundamental principles and requirements is essential for building a solid foundation.'} ${stepGroup[3] ? stepGroup[3] : 'This initial phase sets the stage for all future success and helps avoid common pitfalls that many beginners encounter.'}`;
+                      paragraphContent = `Getting started with ${title} begins with ${stepGroup[0]?.toLowerCase() || 'understanding the basics'}. This crucial first step involves ${stepGroup[1] ? stepGroup[1].toLowerCase() : 'conducting thorough research and preparation'}. ${stepGroup[2] ? stepGroup[2] : 'Understanding the fundamental principles and requirements is essential for building a solid foundation.'} ${stepGroup[3] ? stepGroup[3] : 'This initial phase sets the stage for all future success and helps avoid common pitfalls that many beginners encounter.'}`;
                     } else if (i === 1) {
                       paragraphContent = `After establishing your foundation, the next critical phase involves ${stepGroup[0] ? stepGroup[0].toLowerCase() : 'setting up the necessary infrastructure and systems'}. This includes ${stepGroup[1] ? stepGroup[1].toLowerCase() : 'acquiring the required tools and resources'}. ${stepGroup[2] ? stepGroup[2] : 'Proper preparation and setup are crucial for optimal performance and results.'} ${stepGroup[3] ? stepGroup[3] : 'This phase requires careful attention to detail and often involves learning new skills or technologies.'}`;
                     } else if (i === 2) {
-                      paragraphContent = `Implementation and execution are fundamental to building success in ${title.toLowerCase()}, which is why ${stepGroup[0] ? stepGroup[0].toLowerCase() : 'developing a strategic approach'}. This involves ${stepGroup[1] ? stepGroup[1].toLowerCase() : 'creating a systematic plan'}. ${stepGroup[2] ? stepGroup[2] : 'The key is maintaining consistency and following proven methodologies.'} ${stepGroup[3] ? stepGroup[3] : 'This phase often requires patience and persistence as you build momentum and establish your presence.'}`;
+                      paragraphContent = `Implementation and execution are fundamental to building success in ${title?.toLowerCase() || 'this method'}, which is why ${stepGroup[0] ? stepGroup[0].toLowerCase() : 'developing a strategic approach'}. This involves ${stepGroup[1] ? stepGroup[1].toLowerCase() : 'creating a systematic plan'}. ${stepGroup[2] ? stepGroup[2] : 'The key is maintaining consistency and following proven methodologies.'} ${stepGroup[3] ? stepGroup[3] : 'This phase often requires patience and persistence as you build momentum and establish your presence.'}`;
                     } else if (i === 3) {
-                      paragraphContent = `Optimization and refinement are crucial for ensuring your ${title.toLowerCase()} efforts achieve maximum effectiveness. This involves ${stepGroup[0] ? stepGroup[0].toLowerCase() : 'analyzing performance and making improvements'}. ${stepGroup[1] ? stepGroup[1] : 'Regular assessment and adjustment help maintain competitive advantage.'} ${stepGroup[2] ? stepGroup[2] : 'Continuous improvement is essential for long-term success and growth.'} ${stepGroup[3] ? stepGroup[3] : 'This ongoing process helps you stay ahead of changes and maintain relevance in your field.'}`;
+                      paragraphContent = `Optimization and refinement are crucial for ensuring your ${title?.toLowerCase() || 'this method'} efforts achieve maximum effectiveness. This involves ${stepGroup[0] ? stepGroup[0].toLowerCase() : 'analyzing performance and making improvements'}. ${stepGroup[1] ? stepGroup[1] : 'Regular assessment and adjustment help maintain competitive advantage.'} ${stepGroup[2] ? stepGroup[2] : 'Continuous improvement is essential for long-term success and growth.'} ${stepGroup[3] ? stepGroup[3] : 'This ongoing process helps you stay ahead of changes and maintain relevance in your field.'}`;
                     } else {
-                      paragraphContent = `Finally, ${stepGroup[0] ? stepGroup[0].toLowerCase() : 'ongoing development and growth'} are essential components of ${title.toLowerCase()} success. This involves ${stepGroup[1] ? stepGroup[1].toLowerCase() : 'continuous learning and adaptation'}. ${stepGroup[2] ? stepGroup[2] : 'Building sustainable success requires long-term commitment and strategic thinking.'} ${stepGroup[3] ? stepGroup[3] : 'The most successful practitioners view this as a journey of continuous improvement and expansion.'}`;
+                      paragraphContent = `Finally, ${stepGroup[0] ? stepGroup[0].toLowerCase() : 'ongoing development and growth'} are essential components of ${title?.toLowerCase() || 'this method'} success. This involves ${stepGroup[1] ? stepGroup[1].toLowerCase() : 'continuous learning and adaptation'}. ${stepGroup[2] ? stepGroup[2] : 'Building sustainable success requires long-term commitment and strategic thinking.'} ${stepGroup[3] ? stepGroup[3] : 'The most successful practitioners view this as a journey of continuous improvement and expansion.'}`;
                     }
                     
                     paragraphs.push(
@@ -388,15 +427,15 @@ export default async function MethodPage({ params }: Props) {
                     let paragraphContent = '';
                     
                     if (i === 0) {
-                      paragraphContent = `One of the most significant advantages of ${title} is ${advantageGroup[0].toLowerCase()}. This fundamental benefit ${advantageGroup[1] ? advantageGroup[1].toLowerCase() : 'provides substantial value and opportunities'}. ${advantageGroup[2] ? advantageGroup[2] : 'This advantage sets the foundation for success and creates multiple pathways for growth and development.'} ${advantageGroup[3] ? advantageGroup[3] : 'Understanding and leveraging this advantage is crucial for maximizing your potential in this field.'}`;
+                      paragraphContent = `One of the most significant advantages of ${title} is ${advantageGroup[0]?.toLowerCase() || 'its flexibility'}. This fundamental benefit ${advantageGroup[1] ? advantageGroup[1].toLowerCase() : 'provides substantial value and opportunities'}. ${advantageGroup[2] ? advantageGroup[2] : 'This advantage sets the foundation for success and creates multiple pathways for growth and development.'} ${advantageGroup[3] ? advantageGroup[3] : 'Understanding and leveraging this advantage is crucial for maximizing your potential in this field.'}`;
                     } else if (i === 1) {
-                      paragraphContent = `Another major advantage of ${title.toLowerCase()} is ${advantageGroup[0] ? advantageGroup[0].toLowerCase() : 'the flexibility and opportunities it provides'}. This benefit ${advantageGroup[1] ? advantageGroup[1].toLowerCase() : 'offers unique advantages over traditional approaches'}. ${advantageGroup[2] ? advantageGroup[2] : 'This flexibility enables practitioners to adapt to changing circumstances and market conditions.'} ${advantageGroup[3] ? advantageGroup[3] : 'The ability to customize and personalize your approach is a significant competitive advantage.'}`;
+                      paragraphContent = `Another major advantage of ${title?.toLowerCase() || 'this method'} is ${advantageGroup[0] ? advantageGroup[0].toLowerCase() : 'the flexibility and opportunities it provides'}. This benefit ${advantageGroup[1] ? advantageGroup[1].toLowerCase() : 'offers unique advantages over traditional approaches'}. ${advantageGroup[2] ? advantageGroup[2] : 'This flexibility enables practitioners to adapt to changing circumstances and market conditions.'} ${advantageGroup[3] ? advantageGroup[3] : 'The ability to customize and personalize your approach is a significant competitive advantage.'}`;
                     } else if (i === 2) {
-                      paragraphContent = `${advantageGroup[0] ? advantageGroup[0] : 'Skill development and learning opportunities'} represent another major advantage of ${title.toLowerCase()}, ${advantageGroup[1] ? advantageGroup[1].toLowerCase() : 'providing valuable experience and knowledge'}. ${advantageGroup[2] ? advantageGroup[2] : 'These skills are often transferable to other areas and can enhance your overall career prospects.'} ${advantageGroup[3] ? advantageGroup[3] : 'Continuous learning and skill development are essential for long-term success and competitiveness.'}`;
+                                              paragraphContent = `${advantageGroup[0] ? advantageGroup[0] : 'Skill development and learning opportunities'} represent another major advantage of ${title?.toLowerCase() || 'this method'}, ${advantageGroup[1] ? advantageGroup[1].toLowerCase() : 'providing valuable experience and knowledge'}. ${advantageGroup[2] ? advantageGroup[2] : 'These skills are often transferable to other areas and can enhance your overall career prospects.'} ${advantageGroup[3] ? advantageGroup[3] : 'Continuous learning and skill development are essential for long-term success and competitiveness.'}`;
                     } else if (i === 3) {
                       paragraphContent = `${advantageGroup[0] ? advantageGroup[0] : 'Scalability and growth potential'} is a unique advantage that ${advantageGroup[1] ? advantageGroup[1].toLowerCase() : 'allows for significant expansion and development'}. ${advantageGroup[2] ? advantageGroup[2] : 'This scalability enables practitioners to increase their impact and income over time.'} ${advantageGroup[3] ? advantageGroup[3] : 'The ability to scale operations and reach larger audiences is crucial for long-term success.'}`;
                     } else {
-                      paragraphContent = `Finally, ${advantageGroup[0] ? advantageGroup[0].toLowerCase() : 'the long-term benefits and sustainability'} of ${title.toLowerCase()} provide ${advantageGroup[1] ? advantageGroup[1].toLowerCase() : 'lasting value and opportunities'}. ${advantageGroup[2] ? advantageGroup[2] : 'These benefits extend beyond immediate financial gains and contribute to overall life satisfaction.'} ${advantageGroup[3] ? advantageGroup[3] : 'Building sustainable success requires understanding and leveraging these long-term advantages effectively.'}`;
+                                              paragraphContent = `Finally, ${advantageGroup[0] ? advantageGroup[0].toLowerCase() : 'the long-term benefits and sustainability'} of ${title?.toLowerCase() || 'this method'} provide ${advantageGroup[1] ? advantageGroup[1].toLowerCase() : 'lasting value and opportunities'}. ${advantageGroup[2] ? advantageGroup[2] : 'These benefits extend beyond immediate financial gains and contribute to overall life satisfaction.'} ${advantageGroup[3] ? advantageGroup[3] : 'Building sustainable success requires understanding and leveraging these long-term advantages effectively.'}`;
                     }
                     
                     paragraphs.push(
@@ -428,15 +467,15 @@ export default async function MethodPage({ params }: Props) {
                     let paragraphContent = '';
                     
                     if (i === 0) {
-                      paragraphContent = `One of the most significant challenges associated with ${title} is ${challengeGroup[0].toLowerCase()}. This fundamental obstacle ${challengeGroup[1] ? challengeGroup[1].toLowerCase() : 'presents substantial difficulties for practitioners'}. ${challengeGroup[2] ? challengeGroup[2] : 'Understanding and preparing for this challenge is crucial for long-term success.'} ${challengeGroup[3] ? challengeGroup[3] : 'This challenge requires careful planning and strategic approaches to overcome effectively.'}`;
+                      paragraphContent = `One of the most significant challenges associated with ${title} is ${challengeGroup[0]?.toLowerCase() || 'the learning curve'}. This fundamental obstacle ${challengeGroup[1] ? challengeGroup[1].toLowerCase() : 'presents substantial difficulties for practitioners'}. ${challengeGroup[2] ? challengeGroup[2] : 'Understanding and preparing for this challenge is crucial for long-term success.'} ${challengeGroup[3] ? challengeGroup[3] : 'This challenge requires careful planning and strategic approaches to overcome effectively.'}`;
                     } else if (i === 1) {
-                      paragraphContent = `Another major challenge in ${title.toLowerCase()} is ${challengeGroup[0] ? challengeGroup[0].toLowerCase() : 'the complexity and learning curve involved'}. This difficulty ${challengeGroup[1] ? challengeGroup[1].toLowerCase() : 'can be overwhelming for beginners and experienced practitioners alike'}. ${challengeGroup[2] ? challengeGroup[2] : 'Proper preparation and education are essential for navigating this challenge successfully.'} ${challengeGroup[3] ? challengeGroup[3] : 'The time and effort required to overcome this challenge should not be underestimated.'}`;
+                      paragraphContent = `Another major challenge in ${title?.toLowerCase() || 'this method'} is ${challengeGroup[0] ? challengeGroup[0].toLowerCase() : 'the complexity and learning curve involved'}. This difficulty ${challengeGroup[1] ? challengeGroup[1].toLowerCase() : 'can be overwhelming for beginners and experienced practitioners alike'}. ${challengeGroup[2] ? challengeGroup[2] : 'Proper preparation and education are essential for navigating this challenge successfully.'} ${challengeGroup[3] ? challengeGroup[3] : 'The time and effort required to overcome this challenge should not be underestimated.'}`;
                     } else if (i === 2) {
-                      paragraphContent = `${challengeGroup[0] ? challengeGroup[0] : 'Risk management and uncertainty'} represent another significant challenge in ${title.toLowerCase()}, ${challengeGroup[1] ? challengeGroup[1].toLowerCase() : 'requiring careful consideration and planning'}. ${challengeGroup[2] ? challengeGroup[2] : 'These risks can impact both short-term performance and long-term success.'} ${challengeGroup[3] ? challengeGroup[3] : 'Developing effective risk management strategies is essential for sustainable growth.'}`;
+                                              paragraphContent = `${challengeGroup[0] ? challengeGroup[0] : 'Risk management and uncertainty'} represent another significant challenge in ${title?.toLowerCase() || 'this method'}, ${challengeGroup[1] ? challengeGroup[1].toLowerCase() : 'requiring careful consideration and planning'}. ${challengeGroup[2] ? challengeGroup[2] : 'These risks can impact both short-term performance and long-term success.'} ${challengeGroup[3] ? challengeGroup[3] : 'Developing effective risk management strategies is essential for sustainable growth.'}`;
                     } else if (i === 3) {
                       paragraphContent = `${challengeGroup[0] ? challengeGroup[0] : 'Competition and market saturation'} pose ongoing challenges that ${challengeGroup[1] ? challengeGroup[1].toLowerCase() : 'require continuous adaptation and innovation'}. ${challengeGroup[2] ? challengeGroup[2] : 'Staying competitive in this environment demands constant improvement and strategic thinking.'} ${challengeGroup[3] ? challengeGroup[3] : 'The ability to differentiate yourself and provide unique value is crucial for success.'}`;
                     } else {
-                      paragraphContent = `Finally, ${challengeGroup[0] ? challengeGroup[0].toLowerCase() : 'the long-term commitment and persistence required'} in ${title.toLowerCase()} can be ${challengeGroup[1] ? challengeGroup[1].toLowerCase() : 'mentally and emotionally demanding'}. ${challengeGroup[2] ? challengeGroup[2] : 'This challenge requires maintaining motivation and focus over extended periods.'} ${challengeGroup[3] ? challengeGroup[3] : 'Building resilience and developing coping strategies is essential for overcoming this challenge and achieving sustainable success.'}`;
+                      paragraphContent = `Finally, ${challengeGroup[0] ? challengeGroup[0].toLowerCase() : 'the long-term commitment and persistence required'} in ${title?.toLowerCase() || 'this method'} can be ${challengeGroup[1] ? challengeGroup[1].toLowerCase() : 'mentally and emotionally demanding'}. ${challengeGroup[2] ? challengeGroup[2] : 'This challenge requires maintaining motivation and focus over extended periods.'} ${challengeGroup[3] ? challengeGroup[3] : 'Building resilience and developing coping strategies is essential for overcoming this challenge and achieving sustainable success.'}`;
                     }
                     
                     paragraphs.push(
@@ -486,15 +525,15 @@ export default async function MethodPage({ params }: Props) {
                   let paragraphContent = '';
                   
                   if (i === 0) {
-                    paragraphContent = `One of the most important tips for success in ${title} is ${tipGroup[0].toLowerCase()}. This fundamental strategy ${tipGroup[1] ? tipGroup[1].toLowerCase() : 'provides a solid foundation for growth and development'}. ${tipGroup[2] ? tipGroup[2] : 'Understanding and implementing this tip correctly can significantly improve your chances of success.'} ${tipGroup[3] ? tipGroup[3] : 'This approach helps establish credibility and build trust with your target audience.'}`;
+                    paragraphContent = `One of the most important tips for success in ${title} is ${tipGroup[0]?.toLowerCase() || 'maintaining consistency'}. This fundamental strategy ${tipGroup[1] ? tipGroup[1].toLowerCase() : 'provides a solid foundation for growth and development'}. ${tipGroup[2] ? tipGroup[2] : 'Understanding and implementing this tip correctly can significantly improve your chances of success.'} ${tipGroup[3] ? tipGroup[3] : 'This approach helps establish credibility and build trust with your target audience.'}`;
                   } else if (i === 1) {
-                    paragraphContent = `Another crucial tip for ${title.toLowerCase()} success is ${tipGroup[0] ? tipGroup[0].toLowerCase() : 'maintaining consistency and discipline in your approach'}. This practice ${tipGroup[1] ? tipGroup[1].toLowerCase() : 'ensures steady progress and sustainable growth'}. ${tipGroup[2] ? tipGroup[2] : 'Consistency is often more important than perfection when building long-term success.'} ${tipGroup[3] ? tipGroup[3] : 'This discipline helps establish reliable systems and processes that support ongoing improvement.'}`;
+                    paragraphContent = `Another crucial tip for ${title?.toLowerCase() || 'this method'} success is ${tipGroup[0] ? tipGroup[0].toLowerCase() : 'maintaining consistency and discipline in your approach'}. This practice ${tipGroup[1] ? tipGroup[1].toLowerCase() : 'ensures steady progress and sustainable growth'}. ${tipGroup[2] ? tipGroup[2] : 'Consistency is often more important than perfection when building long-term success.'} ${tipGroup[3] ? tipGroup[3] : 'This discipline helps establish reliable systems and processes that support ongoing improvement.'}`;
                   } else if (i === 2) {
-                    paragraphContent = `${tipGroup[0] ? tipGroup[0] : 'Continuous learning and adaptation'} is essential for success in ${title.toLowerCase()}, ${tipGroup[1] ? tipGroup[1].toLowerCase() : 'requiring ongoing education and skill development'}. ${tipGroup[2] ? tipGroup[2] : 'The landscape of this field is constantly evolving, making continuous learning crucial.'} ${tipGroup[3] ? tipGroup[3] : 'Staying current with trends and best practices helps maintain competitive advantage.'}`;
+                    paragraphContent = `${tipGroup[0] ? tipGroup[0] : 'Continuous learning and adaptation'} is essential for success in ${title?.toLowerCase() || 'this method'}, ${tipGroup[1] ? tipGroup[1].toLowerCase() : 'requiring ongoing education and skill development'}. ${tipGroup[2] ? tipGroup[2] : 'The landscape of this field is constantly evolving, making continuous learning crucial.'} ${tipGroup[3] ? tipGroup[3] : 'Staying current with trends and best practices helps maintain competitive advantage.'}`;
                   } else if (i === 3) {
                     paragraphContent = `${tipGroup[0] ? tipGroup[0] : 'Strategic planning and goal setting'} are fundamental tips that ${tipGroup[1] ? tipGroup[1].toLowerCase() : 'help guide your efforts and measure progress'}. ${tipGroup[2] ? tipGroup[2] : 'Clear goals provide direction and motivation for sustained effort.'} ${tipGroup[3] ? tipGroup[3] : 'Regular review and adjustment of strategies ensures continued relevance and effectiveness.'}`;
                   } else {
-                    paragraphContent = `Finally, ${tipGroup[0] ? tipGroup[0].toLowerCase() : 'building strong relationships and networks'} in ${title.toLowerCase()} can ${tipGroup[1] ? tipGroup[1].toLowerCase() : 'provide valuable support and opportunities'}. ${tipGroup[2] ? tipGroup[2] : 'These relationships often lead to collaborations, mentorship, and new business opportunities.'} ${tipGroup[3] ? tipGroup[3] : 'Investing in community building and networking is crucial for long-term success and growth.'}`;
+                    paragraphContent = `Finally, ${tipGroup[0] ? tipGroup[0].toLowerCase() : 'building strong relationships and networks'} in ${title?.toLowerCase() || 'this method'} can ${tipGroup[1] ? tipGroup[1].toLowerCase() : 'provide valuable support and opportunities'}. ${tipGroup[2] ? tipGroup[2] : 'These relationships often lead to collaborations, mentorship, and new business opportunities.'} ${tipGroup[3] ? tipGroup[3] : 'Investing in community building and networking is crucial for long-term success and growth.'}`;
                   }
                   
                   paragraphs.push(
@@ -542,15 +581,15 @@ export default async function MethodPage({ params }: Props) {
                   let paragraphContent = '';
                   
                   if (i === 0) {
-                    paragraphContent = `One of the most common mistakes in ${title} is ${mistakeGroup[0].toLowerCase()}. This fundamental error ${mistakeGroup[1] ? mistakeGroup[1].toLowerCase() : 'can significantly impact your success and progress'}. ${mistakeGroup[2] ? mistakeGroup[2] : 'Understanding and avoiding this mistake is crucial for building a solid foundation.'} ${mistakeGroup[3] ? mistakeGroup[3] : 'This mistake often leads to setbacks and delays in achieving your goals.'}`;
+                    paragraphContent = `One of the most common mistakes in ${title} is ${mistakeGroup[0]?.toLowerCase() || 'lack of planning'}. This fundamental error ${mistakeGroup[1] ? mistakeGroup[1].toLowerCase() : 'can significantly impact your success and progress'}. ${mistakeGroup[2] ? mistakeGroup[2] : 'Understanding and avoiding this mistake is crucial for building a solid foundation.'} ${mistakeGroup[3] ? mistakeGroup[3] : 'This mistake often leads to setbacks and delays in achieving your goals.'}`;
                   } else if (i === 1) {
-                    paragraphContent = `Another critical mistake in ${title.toLowerCase()} is ${mistakeGroup[0] ? mistakeGroup[0].toLowerCase() : 'failing to develop a unique approach and perspective'}. This error ${mistakeGroup[1] ? mistakeGroup[1].toLowerCase() : 'can limit your differentiation and competitive advantage'}. ${mistakeGroup[2] ? mistakeGroup[2] : 'Developing your own unique voice and approach is essential for standing out.'} ${mistakeGroup[3] ? mistakeGroup[3] : 'This mistake often results in blending in with competitors rather than establishing your own identity.'}`;
+                    paragraphContent = `Another critical mistake in ${title?.toLowerCase() || 'this method'} is ${mistakeGroup[0] ? mistakeGroup[0].toLowerCase() : 'failing to develop a unique approach and perspective'}. This error ${mistakeGroup[1] ? mistakeGroup[1].toLowerCase() : 'can limit your differentiation and competitive advantage'}. ${mistakeGroup[2] ? mistakeGroup[2] : 'Developing your own unique voice and approach is essential for standing out.'} ${mistakeGroup[3] ? mistakeGroup[3] : 'This mistake often results in blending in with competitors rather than establishing your own identity.'}`;
                   } else if (i === 2) {
                     paragraphContent = `${mistakeGroup[0] ? mistakeGroup[0] : 'Ignoring optimization and best practices'} is a mistake that ${mistakeGroup[1] ? mistakeGroup[1].toLowerCase() : 'can significantly impact your performance and results'}. ${mistakeGroup[2] ? mistakeGroup[2] : 'Proper optimization and following best practices are essential for success.'} ${mistakeGroup[3] ? mistakeGroup[3] : 'This mistake often leads to suboptimal performance and missed opportunities.'}`;
                   } else if (i === 3) {
                     paragraphContent = `${mistakeGroup[0] ? mistakeGroup[0] : 'Inconsistent effort and lack of discipline'} is another common mistake that ${mistakeGroup[1] ? mistakeGroup[1].toLowerCase() : 'can derail your progress and success'}. ${mistakeGroup[2] ? mistakeGroup[2] : 'Consistency and discipline are fundamental to achieving long-term success.'} ${mistakeGroup[3] ? mistakeGroup[3] : 'This mistake often results in slow progress and difficulty maintaining momentum.'}`;
                   } else {
-                    paragraphContent = `Finally, ${mistakeGroup[0] ? mistakeGroup[0].toLowerCase() : 'not leveraging all available opportunities and resources'} in ${title.toLowerCase()} can ${mistakeGroup[1] ? mistakeGroup[1].toLowerCase() : 'limit your growth potential and success'}. ${mistakeGroup[2] ? mistakeGroup[2] : 'Taking advantage of all available resources and opportunities is crucial for maximizing results.'} ${mistakeGroup[3] ? mistakeGroup[3] : 'This mistake often leads to missed opportunities and slower progress than necessary.'}`;
+                    paragraphContent = `Finally, ${mistakeGroup[0] ? mistakeGroup[0].toLowerCase() : 'not leveraging all available opportunities and resources'} in ${title?.toLowerCase() || 'this method'} can ${mistakeGroup[1] ? mistakeGroup[1].toLowerCase() : 'limit your growth potential and success'}. ${mistakeGroup[2] ? mistakeGroup[2] : 'Taking advantage of all available resources and opportunities is crucial for maximizing results.'} ${mistakeGroup[3] ? mistakeGroup[3] : 'This mistake often leads to missed opportunities and slower progress than necessary.'}`;
                   }
                   
                   paragraphs.push(
@@ -632,10 +671,10 @@ export default async function MethodPage({ params }: Props) {
           </div>
           
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {articlesData
-              .filter(a => a.slug !== slug)
+            {Object.values(investingMethods)
+              .filter((a: any) => a.slug !== slug)
               .slice(0, 4)
-              .map((related, idx) => (
+              .map((related: any, idx: number) => (
                 <Card
                   key={related.slug}
                   className={`bg-gradient-to-br ${colorClasses[idx % colorClasses.length]} hover:shadow-2xl transition-all duration-500 hover:scale-105 cursor-pointer border-0 rounded-3xl overflow-hidden group`}
@@ -696,4 +735,8 @@ export default async function MethodPage({ params }: Props) {
       <Footer/>
     </div>
   )
+  } catch (error) {
+    console.error('Error rendering method page:', error);
+    notFound();
+  }
 }

@@ -23,7 +23,8 @@ import {
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { articlesData } from '@/lib/data/artticleData';
+import fs from 'fs/promises';
+import path from 'path';
 import Link from 'next/link';
 
 export const generateMetadata = () => ({
@@ -55,7 +56,7 @@ export const generateMetadata = () => ({
   },
 });
 
-export default function ArticlesPage({ searchParams }: any) {
+export default async function ArticlesPage({ searchParams }: any) {
   const category = searchParams?.category as string | undefined;
   const sort = (searchParams?.sort as string | undefined) || 'latest';
   const page = (searchParams?.page as string | undefined) || '1';
@@ -63,6 +64,13 @@ export default function ArticlesPage({ searchParams }: any) {
   const articlesPerPage = 12;
 
   // Structured data for articles collection
+  const dir = path.join(process.cwd(), 'lib/data/articles');
+  const files = await fs.readdir(dir);
+  const articlesData = await Promise.all(files.map(async file => {
+    const content = await fs.readFile(path.join(dir, file), 'utf-8');
+    return JSON.parse(content);
+  }));
+
   const structuredData = {
     '@context': 'https://schema.org',
     '@type': 'CollectionPage',

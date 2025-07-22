@@ -2,6 +2,7 @@ import { Header } from '../components/layout/Header';
 import { Footer } from '../components/layout/Footer';
 import HomePageClient from '../components/home/HomePageClient';
 import AdBanner from '@/components/Adbanner';
+import Link from 'next/link';
 
 export const generateMetadata = () => ({
   title: "How to Earn Money Online | 360revenue - Tips, Guides & Strategies",

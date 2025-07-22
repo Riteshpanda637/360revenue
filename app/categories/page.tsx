@@ -33,7 +33,8 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Avatar, AvatarFallback } from '@radix-ui/react-avatar';
-import { articlesData, colorMapping } from '@/lib/data/artticleData';
+import fs from 'fs/promises';
+import path from 'path';
 import Link from 'next/link';
 
 export const generateMetadata = () => ({
@@ -65,8 +66,14 @@ export const generateMetadata = () => ({
   },
 });
 
-export default function CategoriesPage() {
-  // Get unique categories from articles data
+export default async function CategoriesPage() {
+  const dir = path.join(process.cwd(), 'lib/data/articles');
+  const files = await fs.readdir(dir);
+  const articlesData = await Promise.all(files.map(async file => {
+    const content = await fs.readFile(path.join(dir, file), 'utf-8');
+    return JSON.parse(content);
+  }));
+
   const uniqueCategories = Array.from(new Set(articlesData.map(article => article.category)));
   
   // Count articles per category

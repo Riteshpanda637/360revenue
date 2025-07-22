@@ -6,7 +6,8 @@ import Link from 'next/link';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { articlesData } from '../../../lib/data/artticleData';
+import fs from 'fs/promises';
+import path from 'path';
 import { ArrowLeft, ArrowRight, Sparkles, BookOpen, Clock, User, TrendingUp, DollarSign, Target, Star, Zap, ExternalLink } from 'lucide-react'
 import { DynamicArticleCard } from '@/components/home/Readmore/dynamicArticlecard';
 import { Footer } from '@/components/layout/Footer';
@@ -48,9 +49,13 @@ const iconClasses = [
 
 export const generateMetadata = async ({ params }: { params: Promise<{ slug: string }> }) => {
   const { slug } = await params;
-  const article = articlesData.find((a) => a.slug === slug);
-  
-  if (!article) {
+  const filePath = path.join(process.cwd(), 'lib/data/articles', `${slug}.json`);
+  let article = null;
+
+  try {
+    const fileContent = await fs.readFile(filePath, 'utf-8');
+    article = JSON.parse(fileContent);
+  } catch (e) {
     return {
       title: 'Article Not Found | 360° Revenue',
       description: 'The requested article could not be found. Explore our comprehensive guides on earning money online, investing, and financial strategies.',
@@ -96,10 +101,15 @@ export const generateMetadata = async ({ params }: { params: Promise<{ slug: str
 export default async function ArticlePage({ params }: Props) {
   const { slug } = await params;
 
-  // Fetch the article by slug
-  const article = articlesData.find((a) => a.slug === slug);
-
-  if (!article) notFound();
+  // Dynamically load the article JSON file
+  let article = null;
+  try {
+    const filePath = path.join(process.cwd(), 'lib/data/articles', `${slug}.json`);
+    const fileContent = await fs.readFile(filePath, 'utf-8');
+    article = JSON.parse(fileContent);
+  } catch (e) {
+    return notFound();
+  }
 
   return (
     <>
@@ -204,7 +214,7 @@ export default async function ArticlePage({ params }: Props) {
 
             {/* Methods Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
-              {article?.earningMethods.map((method, index) => {
+              {article?.earningMethods.map((method: string, index: number) => {
                 const colorClass = colorClasses[index % colorClasses.length];
                 const iconClass = iconClasses[index % iconClasses.length];
                 

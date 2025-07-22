@@ -23,7 +23,8 @@ import {
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { articlesData } from '@/lib/data/artticleData';
+import fs from 'fs/promises';
+import path from 'path';
 import Link from 'next/link';
 
 export const generateMetadata = () => ({
@@ -55,7 +56,7 @@ export const generateMetadata = () => ({
   },
 });
 
-export default function KeywordsPage() {
+export default async function KeywordsPage() {
   // Define popular keywords with categories and descriptions
   const keywordCategories = [
     {
@@ -136,7 +137,12 @@ export default function KeywordsPage() {
   ];
 
   // Get featured articles for the page
-  const featuredArticles = articlesData.slice(0, 6);
+  const dir = path.join(process.cwd(), 'lib/data/articles');
+  const files = await fs.readdir(dir);
+  const articlesData = await Promise.all(files.map(async file => {
+    const content = await fs.readFile(path.join(dir, file), 'utf-8');
+    return JSON.parse(content);
+  }));
 
   // Structured data for keywords page
   const structuredData = {
@@ -354,7 +360,7 @@ export default function KeywordsPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {featuredArticles.map((article, index) => (
+            {articlesData.slice(0, 6).map((article, index) => (
               <Card key={article.slug} className="group hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border-0 shadow-lg bg-white rounded-2xl overflow-hidden">
                 <CardContent className="p-6">
                   <div className="flex items-center justify-between mb-4">

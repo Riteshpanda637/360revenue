@@ -79,6 +79,18 @@ export const Footer: React.FC = () => {
                   Keywords
                 </Link>
               </li>
+              <li>
+                <Link href="/keywords/freelancing" className="text-gray-300 hover:text-white transition-colors duration-300 flex items-center gap-2 group">
+                  <span className="w-1 h-1 bg-blue-500 rounded-full group-hover:bg-white transition-colors"></span>
+                  Freelancing Guide
+                </Link>
+              </li>
+              <li>
+                <Link href="/keywords/real%20estate" className="text-gray-300 hover:text-white transition-colors duration-300 flex items-center gap-2 group">
+                  <span className="w-1 h-1 bg-blue-500 rounded-full group-hover:bg-white transition-colors"></span>
+                  Real Estate Guide
+                </Link>
+              </li>
             </ul>
           </div>
 

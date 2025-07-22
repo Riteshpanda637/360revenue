@@ -1,4 +1,6 @@
 User-agent: *
+Disallow: /_next/
+Disallow: /favicon.ico
 Allow: /
 Allow: /ads.txt
 Sitemap: https://www.360revenue.in/sitemap.xml 

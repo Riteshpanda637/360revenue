@@ -4,6 +4,7 @@ import { ArrowLeft } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { investingMethods } from '@/lib/data/artticleData';
 import { Metadata } from 'next';
+import Head from 'next/head';
 
 interface PageProps {
   params: Promise<{
@@ -206,12 +207,18 @@ export default async function KeywordDetailPage({ params }: PageProps) {
 
   return (
     <div className="min-h-screen bg-white">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(structuredData)
-        }}
-      />
+      <Head>
+        <title>{`Keyword Guide: ${decodeURIComponent(keyword)} | 360revenue`}</title>
+        <meta name="description" content={`Comprehensive guide for ${decodeURIComponent(keyword)} on 360revenue. Learn strategies, tips, and resources for success.`} />
+        <meta name="keywords" content={`keyword, ${decodeURIComponent(keyword)}, online income, 360revenue, guide, tips, strategies`} />
+        <meta property="og:title" content={`Keyword Guide: ${decodeURIComponent(keyword)} | 360revenue`} />
+        <meta property="og:description" content={`Comprehensive guide for ${decodeURIComponent(keyword)} on 360revenue. Learn strategies, tips, and resources for success.`} />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content={`https://www.360revenue.in/keywords/${keyword}`} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={`Keyword Guide: ${decodeURIComponent(keyword)} | 360revenue`} />
+        <meta name="twitter:description" content={`Comprehensive guide for ${decodeURIComponent(keyword)} on 360revenue. Learn strategies, tips, and resources for success.`} />
+      </Head>
       <Header />
       
       <div className="max-w-4xl mx-auto p-8">

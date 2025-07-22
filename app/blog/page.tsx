@@ -23,6 +23,7 @@ import { Header } from '@/components/layout/Header';
 import Image from 'next/image';
 import { Footer } from '@/components/layout/Footer';
 import { blogData } from '@/lib/data/artticleData';
+import Head from 'next/head';
 
 export default function TeenMoneyPage() {
   const [selectedMethod, setSelectedMethod] = React.useState<number | null>(null);
@@ -49,6 +50,20 @@ export default function TeenMoneyPage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
+      <Head>
+        <title>18 Ways to Make Money as a Teenager | 360revenue Blog</title>
+        <meta name="description" content="Start generating business ideas and building your financial future early. Discover proven strategies to earn money while learning valuable life skills." />
+        <meta name="keywords" content="teen money, make money as a teenager, side hustles, teen business, financial tips, online jobs for teens, 360revenue blog" />
+        <meta property="og:title" content="18 Ways to Make Money as a Teenager | 360revenue Blog" />
+        <meta property="og:description" content="Start generating business ideas and building your financial future early. Discover proven strategies to earn money while learning valuable life skills." />
+        <meta property="og:image" content="/home.png" />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content="https://www.360revenue.in/blog" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="18 Ways to Make Money as a Teenager | 360revenue Blog" />
+        <meta name="twitter:description" content="Start generating business ideas and building your financial future early. Discover proven strategies to earn money while learning valuable life skills." />
+        <meta name="twitter:image" content="/home.png" />
+      </Head>
       <Header />
 
       {/* Hero Section */}
